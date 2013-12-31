@@ -3,3 +3,11 @@ body
     background-image:url("/Images/gplaypattern.png");
     font-family: 'Open Sans', sans-serif;
 }
+
+a{
+    color:#0D3741;
+}
+
+a:hover{
+    color:#333333;
+}
