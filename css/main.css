@@ -1,5 +1,22 @@
 body
 {
+    margin:0px;
     background-image:url("/Images/gplaypattern.png");
     font-family: 'Open Sans', sans-serif;
+}
+
+.sidePane
+{
+    width:25%;
+    float:left;
+    background-color:#333333;
+    height:100%;
+    position:fixed;
+}
+.mainPane
+{
+    width:75%;
+    height:200%;
+    float:left;
+    overflow-y:auto;
 }
