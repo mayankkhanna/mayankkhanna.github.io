@@ -1,7 +1,7 @@
 body
 {
     margin:0px;
-    background-image:url("/Images/gplaypattern.png");
+    background-color:white;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -9,14 +9,42 @@ body
 {
     width:25%;
     float:left;
-    background-color:#333333;
+    background-color:black;
     height:100%;
     position:fixed;
+    background-image: linear-gradient(to bottom, black, transparent), url("/Images/me.jpg");
+    z-index:5;
+    background-size: 100%, 100% auto;
+    background-repeat:no-repeat;
+    background-position: 50% 100%;
+    box-shadow:0px 5px 5px 1px #333333;
 }
+
+.nameHeading{
+    color:white;
+    margin-left:30px;
+    font-size:25px;
+}
+
 .mainPane
 {
     width:75%;
     height:200%;
-    float:left;
+    float:right;
     overflow-y:auto;
+}
+
+.heading{
+    margin:50px;
+    border-bottom: 2px solid #0A5DA6;
+    font-size:22px;
+    color:#333333;
+    padding-bottom:5px;
+}
+
+.description{
+    max-width:700px;
+    text-align:justify;
+    margin:50px;
+    font-size:16px;
 }
