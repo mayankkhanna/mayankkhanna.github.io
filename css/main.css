@@ -5,14 +5,13 @@ body
     font-family: 'Open Sans', sans-serif;
 }
 
-<<<<<<< HEAD
 a{
     color:#0D3741;
 }
 
 a:hover{
     color:#333333;
-=======
+}
 .sidePane
 {
     width:25%;
@@ -55,5 +54,4 @@ a:hover{
     text-align:justify;
     margin:50px;
     font-size:16px;
->>>>>>> origin/main
 }
