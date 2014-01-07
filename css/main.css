@@ -5,13 +5,6 @@ body
     font-family: 'Open Sans', sans-serif;
 }
 
-a{
-    color:#0D3741;
-}
-
-a:hover{
-    color:#333333;
-}
 .sidePane
 {
     width:25%;
@@ -19,12 +12,16 @@ a:hover{
     background-color:black;
     height:100%;
     position:fixed;
-    background-image: linear-gradient(to bottom, black, transparent), url("/Images/me.jpg");
+    background-image: -webkit-linear-gradient(linear, black, transparent,black), url("/Images/me.jpg");
+    background-image: -moz-linear-gradient(linear, black, transparent, black), url("/Images/me.jpg");
+    background-image: linear-gradient(to bottom, black, transparent, black), url("/Images/me.jpg");
     z-index:5;
     background-size: 100%, 100% auto;
     background-repeat:no-repeat;
     background-position: 50% 100%;
+    -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
+    
 }
 
 .nameHeading{
@@ -33,16 +30,38 @@ a:hover{
     font-size:25px;
 }
 
+.social-links{
+    bottom:0px;
+    position:absolute;
+    color:white;
+    margin-left:35px;
+    margin-bottom:10px;
+    font-size:10px;
+}
+
+a.link{
+    color:white;
+    margin-left:10px;
+    font-size:15px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+a.link:hover{
+    text-decoration:underline;
+}
+
 .mainPane
 {
     width:75%;
-    height:200%;
+    max-height:200%;
     float:right;
     overflow-y:auto;
 }
 
 .heading{
     margin:50px;
+    margin-left:100px;
     border-bottom: 2px solid #0A5DA6;
     font-size:22px;
     color:#333333;
@@ -53,5 +72,19 @@ a:hover{
     max-width:700px;
     text-align:justify;
     margin:50px;
+    margin-left:100px;
     font-size:16px;
+}
+
+.footer{
+    margin:50px;
+    margin-left:100px;
+    border-top:1px solid silver;
+    color:silver;
+    font-size:12px;
+}
+
+.footer-link{
+    color:silver;
+    text-decoration:underline;
 }
