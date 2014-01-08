@@ -65,7 +65,6 @@ a.link:hover{
 .mainPane
 {
     width:75%;
-    max-height:200%;
     float:right;
     overflow-y:auto;
 }
@@ -79,12 +78,50 @@ a.link:hover{
     padding-bottom:5px;
 }
 
-.description{
+.description, .workDescription{
     max-width:700px;
     text-align:justify;
     margin:50px;
     margin-left:100px;
     font-size:16px;
+}
+
+.workDescription{
+    display:none;
+}
+
+.display{
+    display:block;
+}
+
+.role{
+    color:silver;
+    margin-left:10px;
+    cursor:pointer;
+}
+
+.highlightedRole{
+    color:#333333;
+}
+
+.work{
+    padding:10px 5px;
+    cursor:pointer;
+}
+
+
+.work>h4{
+    color:#0A5DA6;
+    font-size:22px;
+    margin:10px 0 10px 0;
+    font-weight:300
+}
+.work>p{
+    color:#444444;
+}
+
+.work:hover>h4{
+    text-decoration:underline;
 }
 
 .footer{
