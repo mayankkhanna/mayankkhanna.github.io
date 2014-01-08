@@ -10,9 +10,20 @@ body
     width:25%;
     float:left;
     background-color:black;
+    min-width:300px;
     height:100%;
     position:fixed;
-    background-image: -webkit-linear-gradient(linear, black, transparent,black), url("/Images/me.jpg");
+    background-image:url("/Images/me.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0, black),
+	color-stop(0.5, transparent),
+    color-stop(1,black)), url("/Images/me.jpg");
+    background-image: -webkit-linear-gradient(bottom, black, transparent,black), url("/Images/me.jpg");
+    background-image: -o-linear-gradient(bottom, black, transparent,black), url("/Images/me.jpg");
+    background-image: -ms-linear-gradient(bottom, black, transparent,black), url("/Images/me.jpg");
     background-image: -moz-linear-gradient(linear, black, transparent, black), url("/Images/me.jpg");
     background-image: linear-gradient(to bottom, black, transparent, black), url("/Images/me.jpg");
     z-index:5;
