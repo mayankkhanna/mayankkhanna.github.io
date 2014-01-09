@@ -104,6 +104,8 @@ a.link:hover{
     margin-left:100px;
     margin-right:100px;
     font-size:16px;
+    line-height:25px;
+    min-height: 400px;
 }
 
 .workDescription{
@@ -112,6 +114,15 @@ a.link:hover{
 
 .display{
     display:block;
+}
+
+.workDescription > a{
+    text-decoration:none;
+}
+
+.workDescription p>a{
+    text-decoration:underline;
+    color:#0A5DA6;
 }
 
 .role{
@@ -142,6 +153,17 @@ a.link:hover{
 
 .work:hover>h4{
     text-decoration:underline;
+}
+
+.projectRole, .projectTechnologies{
+    color: #0A5DA6;
+    font-weight:300;
+    font-size:18px;
+    line-height:30px;
+}
+
+.innerTitle{
+    color:#888888;
 }
 
 .footer{
