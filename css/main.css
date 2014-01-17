@@ -171,6 +171,11 @@ a.link:hover{
     color:#888888;
 }
 
+
+.presentation{
+    margin-left:15%;
+}
+
 .footer{
     margin:50px;
     margin-left:100px;
@@ -183,4 +188,12 @@ a.link:hover{
 .footer-link{
     color:silver;
     text-decoration:underline;
+}
+
+.footer:hover{
+    color:#666666;
+}
+
+.footer:hover .footer-link{
+    color:#333333;
 }
