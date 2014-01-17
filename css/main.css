@@ -18,18 +18,18 @@ body
 	linear,
 	left top,
 	left bottom,
-	color-stop(0, black),
-	color-stop(0.5, transparent),
-    color-stop(1,black)), url("/Images/me.jpg");
-    background-image: -webkit-linear-gradient(bottom, black, transparent,black), url("/Images/me.jpg");
-    background-image: -o-linear-gradient(bottom, black, transparent,black), url("/Images/me.jpg");
-    background-image: -ms-linear-gradient(bottom, black, transparent,black), url("/Images/me.jpg");
-    background-image: -moz-linear-gradient(linear, black, transparent, black), url("/Images/me.jpg");
-    background-image: linear-gradient(to bottom, black, transparent, black), url("/Images/me.jpg");
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/me.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/me.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/me.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/me.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/me.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/me.jpg");
     z-index:5;
     background-size: 100%, 100% auto;
     background-repeat:no-repeat;
-    background-position: 50% 100%;
+    background-position: 0 78%;
     -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
     
@@ -45,18 +45,23 @@ body
     display:block;
     color:white;
     margin-left:35px;
+    margin-right:35px;
     margin-top:5px;
     font-size:18px;
     text-decoration:none;
     font-weight:600;
+    padding-bottom:2px;
+    border-bottom:1px solid black;
 }
 
 .navigationlink:hover{
-    text-decoration:underline;
+    text-decoration:none;
+    border-bottom-color:white;
 }
 
 .navigationlink:active{
-    text-decoration:underline;
+    text-decoration:none;
+    border-bottom-color:white;
 }
 
 .social-links{
@@ -64,7 +69,7 @@ body
     position:absolute;
     color:white;
     margin-left:35px;
-    margin-bottom:10px;
+    margin-bottom:20px;
     font-size:10px;
 }
 
