@@ -35,6 +35,78 @@ body
     
 }
 
+.pb
+{
+   
+    background-image:url("/Images/profile.png");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/profile.png");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/profile.png");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/profile.png");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/profile.png");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/profile.png");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/profile.png");
+}
+
+.sa
+{
+   
+    background-image:url("/Images/side_sa.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_sa.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_sa.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_sa.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_sa.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_sa.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_sa.jpg");
+}
+
+.ra
+{
+   
+    background-image:url("/Images/side_ra.png");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_ra.png");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_ra.png");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_ra.png");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_ra.png");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_ra.png");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_ra.png");
+}
+
+.ka
+{
+   
+    background-image:url("/Images/side_ka.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_ka.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_ka.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_ka.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_ka.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_ka.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_ka.jpg");
+}
+
 .nameHeading{
     color:white;
     margin-left:30px;
@@ -171,7 +243,11 @@ a.link:hover{
     color:#888888;
 }
 
-
+.freelanceImg{
+    margin-top:30px;
+    margin-bottom:20px;
+    width:100%;
+}
 .presentation{
     margin-left:15%;
 }
