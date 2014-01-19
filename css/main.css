@@ -52,6 +52,23 @@ body
     background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_infy.jpg");
 }
 
+.work_student
+{
+    background-image:url("/Images/side_college.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_college.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_college.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_college.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_college.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_college.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_college.jpg");
+}
+
 .pb
 {
    
@@ -124,6 +141,25 @@ body
     background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_ka.jpg");
 }
 
+.elgg
+{
+   
+    background-image:url("/Images/side_elgg.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_elgg.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_elgg.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_elgg.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_elgg.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_elgg.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_elgg.jpg");
+}
+
+
 .nameHeading{
     color:white;
     margin-left:30px;
@@ -140,7 +176,7 @@ body
     text-decoration:none;
     font-weight:600;
     padding-bottom:2px;
-    border-bottom:1px solid black;
+    border-bottom:2px solid transparent;
 }
 
 .navigationlink:hover{
@@ -265,6 +301,17 @@ a.link:hover{
     margin-bottom:20px;
     width:100%;
 }
+.shadow{
+     -webkit-box-shadow: 0px 0px 5px 1px #333333;
+    -moz-box-shadow: 0px 0px 5px 1px #333333;
+    -o-box-shadow: 0px 0px 5px 1px #333333;
+    box-shadow: 0px 0px 5px 1px #333333;
+}
+
+.italics{
+    font-style:italic;
+}
+
 .presentation{
     margin-left:15%;
 }
