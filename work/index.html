@@ -120,14 +120,14 @@ States over the map.</p>
         $this.addClass("highlightedRole");
         $(".workDescription").removeClass("display");
         $("#"+id+"Work").addClass("display");
-        document.location=document.location.pathname+"#"+id;
+        //document.location=document.location.pathname+"#"+id;
         if(history.pushState) {
         history.pushState(null, null, '#'+id);
         }
         else {
         location.hash = '#'+id;
-        }
         $("body").scrollTop(0);
+        }
     });
 </script>
 </body>
