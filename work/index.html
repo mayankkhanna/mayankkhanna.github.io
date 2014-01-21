@@ -109,12 +109,12 @@ States over the map</p>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
 <script type="text/javascript">
     if(location.hash){
+        $("html").scrollTop(0);
         $(".role").removeClass("highlightedRole");
         $(location.hash).addClass("highlightedRole");
         $(".workDescription").removeClass("display");
         $(location.hash+"Work").addClass("display");
         $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_"+location.hash.replace("#",""));
-        $("html").scrollTop(0);
     }
     
         $(".workHeading .after").width(($(".highlightedRole").offset().left+ $(".highlightedRole").width())-$(".highlightedRole").parent().offset().left);

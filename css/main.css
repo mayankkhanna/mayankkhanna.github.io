@@ -85,6 +85,42 @@ body
     background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_college.jpg");
 }
 
+.side_labstorm
+{
+   
+    background-image:url("/Images/side_labstorm.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_labstorm.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_labstorm.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_labstorm.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_labstorm.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_labstorm.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_labstorm.jpg");
+}
+
+.side_capture
+{
+   
+    background-image:url("/Images/side_capture.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_capture.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_capture.jpg");
+    background-image: -o-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_capture.jpg");
+    background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_capture.jpg");
+    background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_capture.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_capture.jpg");
+}
+
 .pb
 {
    
