@@ -119,6 +119,7 @@ body
     background-image: -ms-linear-gradient(bottom, black 20%, transparent,black 94%), url("/Images/side_capture.jpg");
     background-image: -moz-linear-gradient(linear, black 20%, transparent, black 94%), url("/Images/side_capture.jpg");
     background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_capture.jpg");
+    
 }
 
 .pb
