@@ -32,7 +32,6 @@ body
     background-position: 0 78%;
     -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
-    
 }
 
 .work_infy
@@ -177,6 +176,11 @@ body
     font-weight:600;
     padding-bottom:2px;
     border-bottom:2px solid transparent;
+    -webkit-transition: border-color .5s ease;
+    -moz-transition: border-color .5s ease;
+    -ms-transition: border-color .5s ease;
+    -o-transition: border-color .5s ease;
+    transition: border-color .5s ease;
 }
 
 .navigationlink:hover{
@@ -217,7 +221,7 @@ a.link:hover{
     overflow-y:auto;
 }
 
-.heading{
+.heading, .workHeading{
     margin:50px;
     margin-left:100px;
     margin-right:100px;
@@ -225,6 +229,27 @@ a.link:hover{
     font-size:22px;
     color:#333333;
     padding-bottom:5px;
+}
+
+.workHeading{
+    border:none;
+}
+
+.workHeading .after
+{ 
+    content: '';
+    display: block;
+    left: 0;
+    bottom: 0;
+    margin-top:2px;
+    height: 2px;
+    width: 0px;
+    background: #0A5DA6;   
+    -webkit-transition: width 1s ease, background-color 1s ease;
+    -moz-transition: width 1s ease, background-color 1s ease;
+    -ms-transition: width 1s ease, background-color 1s ease;
+    -o-transition: width 1s ease, background-color 1s ease;
+    transition: width 1s ease, background-color 1s ease;
 }
 
 .description, .workDescription{
@@ -257,11 +282,20 @@ a.link:hover{
 
 .role{
     color:#aaaaaa;
-    margin-left:10px;
+    margin-left:25px;
     cursor:pointer;
+    -webkit-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
 }
 
-.highlightedRole{
+.role:hover{
+    color:#0A5DA6;
+}
+
+.highlightedRole, .role:hover.highlightedRole{
     color:#333333;
 }
 
@@ -270,19 +304,37 @@ a.link:hover{
     cursor:pointer;
 }
 
-
-.work>h4{
-    color:#0A5DA6;
-    font-size:22px;
-    margin:10px 0 10px 0;
-    font-weight:300
-}
 .work>p{
     color:#444444;
 }
 
-.work:hover>h4{
-    text-decoration:underline;
+.work h4 {
+    color:#0A5DA6;
+    font-size:22px;
+    margin:10px 0 10px 0;
+    font-weight:300;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
+.work h4:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition:width .5s ease, background-color .5s ease;
+    -moz-transition:width .5s ease, background-color .5s ease;
+    -ms-transition:width .5s ease, background-color .5s ease;
+    -o-transition:width .5s ease, background-color .5s ease;
+    transition: width .5s ease, background-color .5s ease;
+}
+.work:hover h4:after {
+    width: 100%;
+    background: #0A5DA6;
 }
 
 .projectRole, .projectTechnologies{
