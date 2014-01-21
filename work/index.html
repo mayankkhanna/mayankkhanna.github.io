@@ -6,7 +6,7 @@
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 </head>
 <body>
-<section class="sidePane work_infy">
+<section class="sidePane work_employee">
 <h3 class='nameHeading'>Mayank Khanna</h3>
 <a class='navigationlink' href='/'>About</a>
 <a class='navigationlink' href='/work/'>Work</a>
@@ -113,6 +113,8 @@ States over the map</p>
         $(location.hash).addClass("highlightedRole");
         $(".workDescription").removeClass("display");
         $(location.hash+"Work").addClass("display");
+        $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_"+location.hash.replace("#",""));
+        $("html").scrollTop(0);
     }
     
         $(".workHeading .after").width(($(".highlightedRole").offset().left+ $(".highlightedRole").width())-$(".highlightedRole").parent().offset().left);
@@ -122,6 +124,7 @@ States over the map</p>
         id=$this.attr("id");
         $(".workHeading .after").width(($this.offset().left+ $this.width())-$this.parent().offset().left);
         $(".role").removeClass("highlightedRole");
+        $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_"+id);
         $this.addClass("highlightedRole");
         $(".workDescription").removeClass("display");
         $("#"+id+"Work").addClass("display");
