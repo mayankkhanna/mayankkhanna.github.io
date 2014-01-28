@@ -214,11 +214,18 @@ body
 }
 
 
-.nameHeading{
+
+h3.nameHeading{
     color:white;
     margin-left:30px;
     font-size:25px;
 }
+
+h3.nameHeading a,h3.nameHeading:hover a, h3.nameHeading a:visited{
+    text-decoration:none;
+    color:white;
+}
+
 
 .navigationlink{
     display:block;
