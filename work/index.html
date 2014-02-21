@@ -56,7 +56,7 @@ States over the map</p>
   </a>
 </div>
 <div class='workDescription' id='freelancerWork'>
-  <a href='/work/purnabrahma/'>
+  <a  class='workLink' href='/work/purnabrahma/'>
   <div class='work'>
       <h4>Purnabrahma</h4>
       <p>Branding and Identity for a restaurant in Bangalore, India that serves Maharashtrian cuisine</p>
@@ -111,7 +111,11 @@ States over the map</p>
 <script type="text/javascript">
 
 $(".workHeading .after").width(($(".highlightedRole").offset().left+ $(".highlightedRole").width())-$(".highlightedRole").parent().offset().left);
-window.onhashchange=function(){    
+  
+    
+window.onhashchange= function(){ changeHash(); }
+    
+function changeHash(){    
         if(location.hash){
         $("html").scrollTop(0);
         $(".role").removeClass("highlightedRole");
@@ -124,14 +128,14 @@ window.onhashchange=function(){
             $this=$("#employee");
             $(".workHeading .after").width(($this.offset().left+ $this.width())-$this.parent().offset().left);
             $(".role").removeClass("highlightedRole");
-            $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_"+id);
+            $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_employee");
             $this.addClass("highlightedRole");
             $(".workDescription").removeClass("display");
             $("#employeeWork").addClass("display");
         }
     }
     
-        
+    changeHash();
     
     $(".role").click(function(e){
         $this=$(this);
