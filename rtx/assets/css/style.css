@@ -778,12 +778,14 @@ label.error { display: block; }
 
 .spot{
 	width:20px; border-radius:10px; background-color:#888; height:20px;display:block;position:relative;
-	margin-left:25%; position:absolute;
+	margin-left:25%; position:absolute; cursor:pointer;
 }
+.tripDesc{font-size:20px; color:#fe4918; font-weight:400; max-width:300px;}
 
 #stat .overlay {background-color:#6b4a3b; opacity:0.7;}
 #speakers .overlay {background-color:#f0c849; opacity:0.5;}
 #newsletter .overlay {background-color:#cd333c; opacity:0.3;}
+.mapFlag{height:22px;}
 .mapDesc{margin-left:20%; margin-top:38px; position: absolute;}
 .rtxLogo{width:335px;}
 

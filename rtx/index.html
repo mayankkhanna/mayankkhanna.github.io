@@ -174,14 +174,15 @@ Imagine - ice-peaked mountains, brainstorming in Himalayas, camping by frozen la
 		c-1.115,6.746-10.951,11.241-14.822,16.649c-4.222,5.897-5.283,13.449-10.899,18.681C68.111,490.856-3,484.028-3,505.227"/>
 </g>
 </svg>
-	<span class="spot" style="left:19px; top:54px;" data-day="1" data-desc="Kickstart from Manali" data-height="13050"></span>
-	<span class="spot" style="left:143px; top:32px;" data-day="2" data-desc="Camping at The Lake of Moon" data-height="13050"></span>
-	<span class="spot" style="left:268px; top:36px;" data-day="3 &amp; 4" data-desc="Ladarcha Fair at Kaza" data-height="13050"></span>
-	<span class="spot" style="left:375px; top:125px;" data-day="5" data-desc="Meditate at Oldest Monastery in Tabo" data-height="13050"></span>
-	<span class="spot" style="left:450px; top:246px;" data-day="6" data-desc="Nako" data-height="13050"></span>
-	<span class="spot" style="left:268px; top:296px;" data-day="7" data-desc="Deep Forest Trail at Sangla" data-height="13050"></span>
-	<span class="spot" style="left:-20px; top:479px;" data-day="8" data-desc="Music Jam Night at Shimla" data-height="13050"></span>
+	<span class="spot" style="left:19px; top:54px;" data-day="1" data-desc="Kickstart from Manali" data-height="13050" data-pos="left:-19px;top:48px;"></span>
+	<span class="spot" style="left:143px; top:32px;" data-day="2" data-desc="Camping at The Lake of Moon" data-height="13050" data-pos="left:80px;top:32px;"></span>
+	<span class="spot" style="left:268px; top:36px;" data-day="3 &amp; 4" data-desc="Ladarcha Fair at Kaza" data-height="13050" data-pos="left:167px;top:32px;"></span>
+	<span class="spot" style="left:375px; top:125px;" data-day="5" data-desc="Meditate at Oldest Monastery in Tabo" data-height="13050" data-pos="left:224px;top:102px;"></span>
+	<span class="spot" style="left:450px; top:246px;" data-day="6" data-desc="Nako" data-height="13050" data-pos="left:386px;top:150px;"></span>
+	<span class="spot" style="left:268px; top:296px;" data-day="7" data-desc="Deep Forest Trail at Sangla" data-height="13050" data-pos="left:200px;top:175px;"></span>
+	<span class="spot" style="left:-20px; top:479px;" data-day="8" data-desc="Music Jam Night at Shimla" data-height="13050" data-pos="left:-125px;top:360px;"></span>
 	</div>
+    <div class="mapDesc" style="left:-19px;top:48px;"><span><img class="mapFlag" src="assets/img/flag.svg"> Day 1</span><p class="tripDesc">Kickstart from Manali</p><span>Height 13050ft</span></div>
     </div>
     </section>
     <!-- End Schedule Section -->
@@ -283,18 +284,8 @@ Imagine - ice-peaked mountains, brainstorming in Himalayas, camping by frozen la
       <div class="overlay"></div>
       <div class="container">
         <article class="article-big animated hiding" data-animation="fadeInDown" data-delay="0">
-          <h5>Newsletter <span class="highlight">Signup</span></h5>
-          <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p>
-          <form id="subscribe" class="form" action="<?=$_SERVER['PHP_SELF']; ?>" method="post">
-            <div class="form-group form-inline">
-              <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" /> 
-			  <input type="submit" class="btn btn-xs btn-default" value="Submit" />
-			  <span id="response">
-				<? require_once('assets/mailchimp/inc/store-address.php'); if($_GET['submit']){ echo storeAddress(); } ?>
-			  </span>
-            </div>
-           
-          </form>
+          <h5 style="margin-top:40px;">“A journey of a thousand miles must begin with a single step.” <span class="highlight"></span></h5>
+          <p class="big highlight" style="float:right; margin-right:100px;">- Lao Tzu</p>
         </article>
       </div>
     </section>
@@ -389,7 +380,7 @@ Imagine - ice-peaked mountains, brainstorming in Himalayas, camping by frozen la
 	<script type="text/javascript" src="assets/mailchimp/js/mailing-list.js"></script>
     <script type="text/javascript" src="assets/js/scripts.js"></script>
 	<script type="text/javascript">
-		var template="<div class='mapDesc' style='text-align:center;'><span>Day ~day~</span><p>~desc~</p><span>Height ~height~ft</span>"
+		var template="<div class='mapDesc' style='text-align:center;'><span><img class='mapFlag' src='assets/img/flag.svg' /> Day ~day~</span><p class='tripDesc'>~desc~</p><span>Height ~height~ft</span>"
 		$(".spot").click(function(){
 			var that=$(this);
 			var temp=template.replace("~day~",that.data("day"))
@@ -399,7 +390,7 @@ Imagine - ice-peaked mountains, brainstorming in Himalayas, camping by frozen la
 				$(".mapDesc").remove();
 			}
 			$("#schedule .container").append(temp);
-			$("#schedule .container .mapDesc").attr("style","left:"+that.css("left")+"; top:"+that.css("top"));	
+			$("#schedule .container .mapDesc").attr("style",that.data("pos"));	
 		})
 	</script>
 </body>
