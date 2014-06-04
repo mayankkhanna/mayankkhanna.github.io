@@ -173,7 +173,7 @@ A trip to Indulge in Epiphanies &amp; Self-Eureka Moments travelling through ice
 		c-1.115,6.746-10.951,11.241-14.822,16.649c-4.222,5.897-5.283,13.449-10.899,18.681C68.111,490.856-3,484.028-3,505.227"/>
 </g>
 </svg>
-	<span class="spot" style="left:19px; top:54px;" data-day="1" data-desc="Kickstart from Manali" data-height="13050" data-pos="left:-19px;top:48px;"></span>
+	<span class="spot highlightSpot" style="left:19px; top:54px;" data-day="1" data-desc="Kickstart from Manali" data-height="13050" data-pos="left:-19px;top:48px;"></span>
 	<span class="spot" style="left:143px; top:32px;" data-day="2" data-desc="Camping at The Lake of Moon" data-height="13050" data-pos="left:80px;top:32px;"></span>
 	<span class="spot" style="left:268px; top:36px;" data-day="3 &amp; 4" data-desc="Ladarcha Fair at Kaza" data-height="13050" data-pos="left:167px;top:32px;"></span>
 	<span class="spot" style="left:375px; top:125px;" data-day="5" data-desc="Meditate at Oldest Monastery in Tabo" data-height="13050" data-pos="left:224px;top:102px;"></span>
@@ -359,15 +359,15 @@ A trip to Indulge in Epiphanies &amp; Self-Eureka Moments travelling through ice
 	<script type="text/javascript">
 		var template="<div class='mapDesc' style='text-align:center;'><span><img class='mapFlag' src='assets/img/flag.svg' /> Day ~day~</span><p class='tripDesc'>~desc~</p><span>Height ~height~ft</span>"
 		$(".spot").click(function(){
+			$(".spot").removeClass("highlightSpot");
 			var that=$(this);
 			var temp=template.replace("~day~",that.data("day"))
 			.replace("~desc~",that.data("desc"))
 			.replace("~height~",that.data("height"));
-			if($(".mapDesc").index()>0){
-				$(".mapDesc").remove();
-			}
+			$(".mapDesc").remove();
 			$("#schedule .container").append(temp);
-			$("#schedule .container .mapDesc").attr("style",that.data("pos"));	
+			$("#schedule .container .mapDesc").attr("style",that.data("pos"));
+			that.addClass("highlightSpot");
 		})
 	</script>
 	<script>(function(){var qs,js,q,s,d=document,gi=d.getElementById,ce=d.createElement,gt=d.getElementsByTagName,id='typef_orm',b='https://s3-eu-west-1.amazonaws.com/share.typeform.com/';if(!gi.call(d,id)){js=ce.call(d,'script');js.id=id;js.src=b+'share.js';q=gt.call(d,'script')[0];q.parentNode.insertBefore(js,q)}id=id+'_';})()</script>

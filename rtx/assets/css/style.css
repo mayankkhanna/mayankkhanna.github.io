@@ -778,16 +778,36 @@ label.error { display: block; }
 }
 
 .spot{
-	width:20px; border-radius:10px; background-color:#888; height:20px;display:block;position:relative;
+	width:20px; border-radius:10px; background-color:#888; height:20px;display:block;
 	margin-left:25%; position:absolute; cursor:pointer;
 }
+.highlightSpot{background-color:#fe4918; width:25px; height:25px; border-radius:100%; border:5px solid #ffffff;
+-webkit-animation: effect  1.5s ease-in infinite; /* Chrome, Safari, Opera */
+animation: effect 1.5s ease-in infinite; 
+ }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes effect
+{
+from {border:5px solid #ffffff;background-color:#fe4918;}
+to {border:5px solid #fe4918;background-color:#ffffff;}
+}
+
+/* Standard syntax */
+@keyframes effect
+{
+from {border:5px solid #ffffff;background-color:#fe4918;}
+to {border:5px solid #fe4918;background-color:#ffffff;}
+}
+
+
 .tripDesc{font-size:20px; color:#fe4918; font-weight:400; max-width:300px;}
 
 #stat .overlay {background-color:#6b4a3b; opacity:0.7;}
 #speakers .overlay {background-color:#f0c849; opacity:0.5;}
 #newsletter .overlay {background-color:#cd333c; opacity:0.3;}
 .mapFlag{height:22px;}
-.mapDesc{margin-left:20%; margin-top:38px; position: absolute;}
+.mapDesc{margin-left:20%; margin-top:38px; position: absolute; }
 .rtxLogo{width:335px;}
 
 /* Tablet device */
