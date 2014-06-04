@@ -174,7 +174,8 @@ hr.white { border-color: #F3AE9B; }
   padding-left: 10px; 
   padding-right: 15px;
   margin-left: 15px;
-  font-size: 14px; }
+  font-size: 14px; 
+  color:#ffffff;}
 .navigation-bar > li.featured a:hover {background:#fe4918; color:#fff; outline:1px solid #fe4918;} 
 .navigation-social li { padding-top: 30px; padding-bottom: 15px; }
 .navigation-social li a { font-size:15pt; padding-left: 20px; padding-right: 20px; }
