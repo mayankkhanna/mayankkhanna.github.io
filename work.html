@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mayank Khanna | Work</title>
+<link rel="stylesheet" href="/css/main.css" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<section class="sidePane">
+<h3 class='nameHeading'><a href='/'>Mayank Khanna</a></h3>
+<a class='navigationlink' href='/'>About</a>
+<a class='navigationlink' href='/work.html'>Work</a>
+<a class='navigationlink' href='/docs/mayank_khanna_resume.pdf' target="_blank">CV</a>
+<div class='social-links'>me on 
+    <a class='link' href='http://www.behance.net/MayankKhanna' target="_blank">Behance</a>
+    <a class='link' href='http://twitter.com/mynk_k' target="_blank">Twitter</a>
+    <a class='link' href='http://www.facebook.com/mayank.khanna.965' target="_blank">Facebook</a></div>
+</section>
+<section class="mainPane">
+<div class='heading'>Work As
+<span class='role highlightedRole' id='employee'>Employee</span>
+<span class='role' id='freelancer'>Freelancer</span>
+<span class='role' id='student'>Student</span>
+</div>
+<div class='workDescription display' id='employeeWork'>
+  <a href="/work/labstorm">
+  <div class='work'>
+      <h4>Infosys Labstorm</h4>
+      <p>Infosys Labstorm is the Infosys Showcase and Co-creation, Collaboration platform with a
+Social Networking essence to it.</p>
+  </div>
+  </a>
+  <a href="/work/customerintent">
+  <div class='work'>
+      <h4>Customer Intent Capture</h4>
+      <p>An iPad app prototype for an Insurance company done as a part of Infosys Labs in a one-week deadline.  </p>
+  </div>
+  </a>
+  <a href="/work/modernweb">
+  <div class='work'>
+      <h4>Research on Current trends in the Modern Web</h4>
+      <p>Research compiled in form of a presentation that covers areas of Modern Web Application Design &amp; Development</p>
+  </div>
+  </a>
+  <a href="/work/visualization">
+  <div class='work'>
+      <h4>Visualization of Real time credit-card Transactions</h4>
+      <p>A Proof of Concept on visualizing the number of real-time transactions in parts of United
+States over the map.</p>
+  </div>
+  </a>
+  <a href="/work/bix">
+  <div class='work'>
+      <h4>Infosys BIX</h4>
+      <p>Platform comprising of series of tools to automate several processes in areas of Business Intelligence and Big Data</p>
+  </div>
+  </a>
+</div>
+<div class='workDescription' id='freelancerWork'>
+  <a>
+  <div class='work'>
+      <h4>Purnabrahma</h4>
+      <p>Branding and Identity for a restaurant in Bangalore, India that serves Maharashtrian cuisine</p>
+  </div>
+  </a>
+  <a>
+  <div class='work'>
+      <h4>Kaagazi</h4>
+      <p>E-commerce website for my friend's startup in the space of Handbound Notebooks</p>
+  </div>
+  </a>
+  <div class='work'>
+      <h4>Rajneethi</h4>
+      <p>Logo for an Indian Political Startup</p>
+  </div>
+  </a>
+  <a>
+  <div class='work'>
+      <h4>Sapthagiri Alumni</h4>
+      <p>Branding and campaign design for my college alumni</p>
+  </div>
+  </a>
+  <a>
+  <div class='work'>
+      <h4>QuanTech Origin</h4>
+      <p>Logo for an Indian educational startup</p>
+  </div>
+  </a>
+</div>
+<div class='workDescription' id='studentWork'>
+  <a href='/work/elgg'>
+  <div class='work'>
+      <h4>Modification of Social-Networking Platform, Elgg, to work with NoSql Databases</h4>
+      <p>Final year project to demonstrate how Elgg, an open-source Social Networking Platform could work with NoSQL databases (CouchDB)</p>
+  </div>
+  </a>
+  <a href='/work/gigapixel'>
+  <div class='work'>
+      <h4>Gigapixel Imaging</h4>
+      <p>Research compiled in form of a presentation about the process of Gigapixel Imaging</p>
+  </div>
+  </a>
+  <a href='/work/bioinformatics'>
+  <div class='work'>
+      <h4>Mutational analysis of Cancer using BioInformatics</h4>
+      <p>Presentation to describe how BioInformatics could prove helpful in determining carcinogenic genes</p>
+  </div>
+  </a>
+  </div>
+<div class='footer'> This website is created using <a class='footer-link' href="http://pages.github.com/" target="_blank">Github Pages</a> and currently hosted by <a class='footer-link' href='http://github.com/'>Github</a>.
+    <br/>
+    Works fine on all modern browsers- Chrome, Firefox, Safari</div>
+</section>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript">
+    $(".role").click(function(){
+        $this=$(this);
+        id=$this.attr("id");
+        $(".role").removeClass("highlightedRole");
+        $this.addClass("highlightedRole");
+        $(".workDescription").removeClass("display");
+        $("#"+id+"Work").addClass("display");
+        //document.location=document.location.replace(/#[a-z]*/g,"")+"#"+id;
+    });
+</script>
+</body>
+</html>

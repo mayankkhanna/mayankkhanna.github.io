@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>numberOfRepeats</key>
+	<integer>1</integer>
+	<key>positionOnPath</key>
+	<real>0.5</real>
+	<key>repeatPolicy</key>
+	<integer>1</integer>
+	<key>scaleInitialDecoration</key>
+	<real>1</real>
+	<key>scaleRepeatedDecorations</key>
+	<real>1</real>
+	<key>shouldBend</key>
+	<false/>
+	<key>spacing</key>
+	<real>1.1000000238418579</real>
+</dict>
+</plist>

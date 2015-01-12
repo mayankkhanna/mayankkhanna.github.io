@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>InstallMenu</key>
+	<true/>
+	<key>Options</key>
+	<dict>
+		<key>disableSubpixelAntialiasing</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Disable Subpixel Antialiasing</string>
+		</dict>
+		<key>DontExitWhenValidationFails</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Don&apos;t Exit When Validation Fails (Pretend to be hacked)</string>
+		</dict>
+		<key>exportCompactSVG</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Export Compact SVG</string>
+		</dict>
+		<key>recordAllocations</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Record Model Object Allocations</string>
+		</dict>
+		<key>tryToFitToPixelBounds</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Try To Fit To Pixel Bounds</string>
+		</dict>
+		<key>SketchPlayDebug</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Sketch Mirror Debugging Enabled</string>
+		</dict>
+		<key>RevealConvertedEPSFile</key>
+		<dict>
+			<key>default</key>
+			<false/>
+			<key>title</key>
+			<string>Show PDF For Converted EPS </string>
+		</dict>
+		<key>MSDraw</key>
+		<dict>
+			<key>suboptions</key>
+			<dict>
+				<key>MSDrawInnerContentTileFrame</key>
+				<dict>
+					<key>default</key>
+					<false/>
+					<key>title</key>
+					<string>Draw Inner Content Tile Frame</string>
+				</dict>
+				<key>MSDrawTileFrame</key>
+				<dict>
+					<key>default</key>
+					<false/>
+					<key>title</key>
+					<string>Draw Tile Frame</string>
+				</dict>
+				<key>MSDrawForceRenderAll</key>
+				<dict>
+					<key>default</key>
+					<false/>
+					<key>title</key>
+					<string>Force Render All</string>
+				</dict>
+				<key>MSLayerGroupDrawOutline</key>
+				<dict>
+					<key>default</key>
+					<false/>
+					<key>title</key>
+					<string>Draw Layer Group Outline</string>
+				</dict>
+				<key>MSShapeGroupDrawOutline</key>
+				<dict>
+					<key>default</key>
+					<false/>
+					<key>title</key>
+					<string>Draw Shape Group Outline</string>
+				</dict>
+				<key>MSDrawDottedDirtyRect</key>
+				<dict>
+					<key>default</key>
+					<false/>
+					<key>title</key>
+					<string>Draw Dotted Dirty Rect</string>
+				</dict>
+			</dict>
+		</dict>
+	</dict>
+	<key>Channels</key>
+	<dict>
+		<key>Error</key>
+		<dict>
+			<key>Enabled</key>
+			<true/>
+			<key>Handlers</key>
+			<array>
+				<string>ErrorPresenter</string>
+				<string>NSLog</string>
+			</array>
+		</dict>
+	</dict>
+	<key>Handlers</key>
+	<dict>
+		<key>ECLogHandlerFile</key>
+		<dict>
+			<key>Default</key>
+			<true/>
+		</dict>
+		<key>ECLogHandlerNSLog</key>
+		<dict>
+			<key>Default</key>
+			<true/>
+		</dict>
+	</dict>
+</dict>
+</plist>

@@ -2,6 +2,7 @@ body
 {
     margin:0px;
     background-color:white;
+    -webkit-font-smoothing:antialiased;
     font-family: 'Open Sans', sans-serif;
 }
 
@@ -10,41 +11,469 @@ body
     width:25%;
     float:left;
     background-color:black;
+    min-width:300px;
     height:100%;
     position:fixed;
-    background-image: linear-gradient(to bottom, black, transparent), url("/Images/me.jpg");
+    background-image:url("/Images/me.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/me.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/me.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/me.jpg");
     z-index:5;
     background-size: 100%, 100% auto;
     background-repeat:no-repeat;
-    background-position: 50% 100%;
+    background-position: 0 78%;
+    -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
 }
 
-.nameHeading{
+.work_employee
+{
+    background-image:url("/Images/side_infy.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_infy.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_infy.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_infy.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_infy.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_infy.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_infy.jpg");
+}
+
+.work_freelancer
+{
+    background-image:url("/Images/side_freelance.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_freelance.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_freelance.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_freelance.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_freelance.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_freelance.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_freelance.jpg");
+}
+
+.work_student
+{
+    background-image:url("/Images/side_college.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_college.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_college.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_college.jpg");
+}
+
+.side_labstorm
+{
+   
+    background-image:url("/Images/side_labstorm.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_labstorm.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_labstorm.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_labstorm.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_labstorm.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_labstorm.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_labstorm.jpg");
+}
+
+.side_capture
+{
+   
+    background-image:url("/Images/side_capture.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_capture.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_capture.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_capture.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_capture.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_capture.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_capture.jpg");
+    
+}
+
+.pb
+{
+   
+    background-image:url("/Images/profile.png");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/profile.png");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/profile.png");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/profile.png");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/profile.png");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/profile.png");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/profile.png");
+}
+
+.sa
+{
+   
+    background-image:url("/Images/side_sa.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_sa.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_sa.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_sa.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_sa.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_sa.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_sa.jpg");
+}
+
+.ra
+{
+   
+    background-image:url("/Images/side_ra.png");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_ra.png");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_ra.png");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_ra.png");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_ra.png");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_ra.png");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_ra.png");
+}
+
+.ka
+{
+   
+    background-image:url("/Images/side_ka.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_ka.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_ka.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_ka.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_ka.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_ka.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_ka.jpg");
+}
+
+.elgg
+{
+   
+    background-image:url("/Images/side_elgg.jpg");
+    background-image: -webkit-gradient(
+	linear,
+	left top,
+	left bottom,
+	color-stop(0.2, black),
+	color-stop(0.6, transparent),
+    color-stop(0.94,black)), url("/Images/side_elgg.jpg");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_elgg.jpg");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_elgg.jpg");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_elgg.jpg");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_elgg.jpg");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_elgg.jpg");
+}
+
+
+
+h3.nameHeading{
     color:white;
     margin-left:30px;
     font-size:25px;
 }
 
+h3.nameHeading a,h3.nameHeading:hover a, h3.nameHeading a:visited{
+    text-decoration:none;
+    color:white;
+}
+
+
+.navigationlink{
+    display:block;
+    color:white;
+    margin-left:35px;
+    margin-right:35px;
+    margin-top:5px;
+    font-size:18px;
+    text-decoration:none;
+    font-weight:600;
+    padding-bottom:2px;
+    border-bottom:2px solid transparent;
+    -webkit-transition: border-color .5s ease;
+    -moz-transition: border-color .5s ease;
+    -ms-transition: border-color .5s ease;
+    -o-transition: border-color .5s ease;
+    transition: border-color .5s ease;
+}
+
+.navigationlink:hover{
+    text-decoration:none;
+    border-bottom-color:white;
+}
+
+.navigationlink:active{
+    text-decoration:none;
+    border-bottom-color:white;
+}
+
+.social-links{
+    bottom:0px;
+    position:absolute;
+    color:white;
+    margin-left:35px;
+    margin-bottom:20px;
+    font-size:10px;
+}
+
+a.link, .projectLink{
+    color:white;
+    margin-left:10px;
+    font-size:15px;
+    cursor:pointer;
+    text-decoration:none;
+}
+
+.projectLink{
+    color:#0A5DA6;
+    font-weight:600;
+}
+
+a.link:hover, .projectLink:hover{
+    text-decoration:underline;
+}
+
 .mainPane
 {
     width:75%;
-    height:200%;
     float:right;
     overflow-y:auto;
 }
 
-.heading{
+.heading, .workHeading {
     margin:50px;
+    margin-left:100px;
+    margin-right:100px;
     border-bottom: 2px solid #0A5DA6;
     font-size:22px;
     color:#333333;
     padding-bottom:5px;
 }
 
-.description{
+.workHeading{
+    border:none;
+}
+
+.workHeading .after
+{ 
+    content: '';
+    display: block;
+    left: 0;
+    bottom: 0;
+    margin-top:2px;
+    height: 2px;
+    width: 0px;
+    background: #0A5DA6;   
+    -webkit-transition: width 1s ease, background-color 1s ease;
+    -moz-transition: width 1s ease, background-color 1s ease;
+    -ms-transition: width 1s ease, background-color 1s ease;
+    -o-transition: width 1s ease, background-color 1s ease;
+    transition: width 1s ease, background-color 1s ease;
+}
+
+.description, .workDescription{
     max-width:700px;
     text-align:justify;
     margin:50px;
+    margin-left:100px;
+    margin-right:100px;
     font-size:16px;
+    line-height:25px;
+    min-height: 400px;
+}
+
+.workDescription{
+    display:none;
+}
+
+.display{
+    display:block;
+}
+a.boldLink{
+    font-weight:bold;
+    color:#0A5DA6;
+    text-decoration: none;
+}
+a.boldLink:hover{
+    text-decoration: none;
+    border-bottom:1px solid;
+    -webkit-transition: border 0.5s ease-in;
+    -ms-transition: border 0.5s ease-in;
+    -moz-transition: border 0.5s ease-in;
+    -o-transition: border 0.5s ease-in;
+    transition: border 0.5s in-out;
+}
+.workDescription > a{
+    text-decoration:none;
+}
+
+.workDescription p>a{
+    text-decoration:underline;
+    color:#0A5DA6;
+}
+
+.role{
+    color:#aaaaaa;
+    margin-left:25px;
+    cursor:pointer;
+    -webkit-transition: color 0.5s ease;
+    -ms-transition: color 0.5s ease;
+    -moz-transition: color 0.5s ease;
+    -o-transition: color 0.5s ease;
+    transition: color 0.5s ease;
+}
+
+.role:hover{
+    color:#0A5DA6;
+}
+
+.highlightedRole, .role:hover.highlightedRole{
+    color:#333333;
+}
+
+.work{
+    padding:10px 5px;
+    cursor:pointer;
+}
+
+.work>p{
+    color:#444444;
+}
+
+.work h4 {
+    color:#0A5DA6;
+    font-size:22px;
+    margin:10px 0 10px 0;
+    font-weight:300;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 6px;
+}
+.work h4:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition:width .5s ease, background-color .5s ease;
+    -moz-transition:width .5s ease, background-color .5s ease;
+    -ms-transition:width .5s ease, background-color .5s ease;
+    -o-transition:width .5s ease, background-color .5s ease;
+    transition: width .5s ease, background-color .5s ease;
+}
+.work:hover h4:after {
+    width: 100%;
+    background: #0A5DA6;
+}
+
+.projectRole, .projectTechnologies{
+    color: #0A5DA6;
+    font-weight:300;
+    font-size:18px;
+    line-height:30px;
+}
+
+.innerTitle{
+    color:#888888;
+}
+
+.freelanceImg{
+    margin-top:30px;
+    margin-bottom:20px;
+    width:100%;
+}
+.shadow{
+     -webkit-box-shadow: 0px 0px 5px 1px #333333;
+    -moz-box-shadow: 0px 0px 5px 1px #333333;
+    -o-box-shadow: 0px 0px 5px 1px #333333;
+    box-shadow: 0px 0px 5px 1px #333333;
+}
+.brochure{
+    margin-left:20px;
+}
+.brochure>img
+{
+    width:45%;
+    margin-right:30px;
+}
+.italics{
+    font-style:italic;
+}
+
+.presentation{
+    margin-top:30px;
+    margin-bottom:10px;
+}
+
+.footer{
+    margin:50px;
+    margin-left:100px;
+    margin-right:100px;
+    border-top:1px solid silver;
+    color:silver;
+    font-size:12px;
+}
+
+.footer-link{
+    color:silver;
+    text-decoration:underline;
+}
+
+.footer:hover{
+    color:#666666;
+}
+
+.footer:hover .footer-link{
+    color:#333333;
 }
