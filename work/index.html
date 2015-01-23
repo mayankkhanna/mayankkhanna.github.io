@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="/css/main.css" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 <title>Mayank Khanna | Work</title>
 </head>
 <body>
-<section class="sidePane work_employee">
+<section class="sidePane work_student">
 <h3 class='nameHeading'><a href='/'>Mayank Khanna</a></h3>
 <a class='navigationlink' href='/'>About</a>
 <a class='navigationlink' href='/work/'>Work</a>
@@ -16,12 +18,38 @@
 </section>
 <section class="mainPane">
 <div class='workHeading'>Work As
-<span class='role highlightedRole' id='employee'>Employee</span>
+<span class='role highlightedRole' id='student'>Student</span>
+<span class='role' id='employee'>Employee</span>
 <span class='role' id='freelancer'>Freelancer</span>
-<span class='role' id='student'>Student</span>
 <div class='after'></div>
 </div>
-<div class='workDescription display' id='employeeWork'>
+<div class='workDescription display' id='studentWork'>
+  <a href='/work/bebetterat/'>
+  <div class='work newwork' style="background-image:url('/images/bebetterat.png')">
+      <h4>Be Better At</h4>
+      <p style="width:400px;">A Social Mobile app concept that helps people share skills with other people</p>
+  </div>
+  </a>
+  <a href='/work/8tracks/' style="display:block; margin-top:35px;">
+  <div class='work newwork' style="background-image:url('/images/8tracks.png')">
+      <h4>Exploring human curated playlists using social tags</h4>
+      <p style="width:360px;">User study of the online radio platform, 8Tracks Explore feature</p>
+  </div>
+  </a>
+  <!--<a href='/work/wireframing/'>
+  <div class='work'>
+      <h4>For the love of Wireframing</h4>
+      <p>Presentation to describe how BioInformatics could prove helpful in determining carcinogenic genes</p>
+  </div>
+  </a>-->
+   <a href='/work/uxanalysis/'style="display:block; margin-top:35px;" >
+  <div class='work newwork' style="background-image:url('/images/uxanalysis.png')" >
+      <h4>Analysing the User Experience of SoundCloud &amp; Rdio</h4>
+      <p style="width:360px;">Comparison of the User experience of two popular online radio platforms</p>
+  </div>
+  </a>
+  </div>
+<div class='workDescription' id='employeeWork'>
   <a href="/work/labstorm">
   <div class='work'>
       <h4>Infosys Labstorm</h4>
@@ -81,32 +109,10 @@ States over the map</p>
   </div>
   </a>
 </div>
-<div class='workDescription' id='studentWork'>
-  <a href='/work/elgg'>
-  <div class='work'>
-      <h4>Modification of Social-Networking Platform, Elgg, to work with NoSql Databases</h4>
-      <p>Final year project to demonstrate how Elgg, an open-source Social Networking Platform could work with NoSQL databases (CouchDB)</p>
-  </div>
-  </a>
-  <a href='/work/gigapixel'>
-  <div class='work'>
-      <h4>Gigapixel Imaging</h4>
-      <p>Research compiled in form of a presentation about the process of Gigapixel Imaging</p>
-  </div>
-  </a>
-  <a href='/work/bioinformatics'>
-  <div class='work'>
-      <h4>Mutational analysis of Cancer using BioInformatics</h4>
-      <p>Presentation to describe how BioInformatics could prove helpful in determining carcinogenic genes</p>
-  </div>
-  </a>
-  </div>
 <div class='footer'> This website is created using <a class='footer-link' href="http://pages.github.com/" target="_blank">Github Pages</a> and currently hosted by <a class='footer-link' href='http://github.com/'>Github</a>.
     <br/>
     Works fine on all modern browsers- Chrome, Firefox, Safari</div>
 </section>
-<link rel="stylesheet" href="/css/main.css" type="text/css"/>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,600' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
 <script type="text/javascript">
 
@@ -125,13 +131,14 @@ function changeHash(){
         $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_"+location.hash.replace("#",""));
         $(".workHeading .after").width(($(".highlightedRole").offset().left+ $(".highlightedRole").width())-$(".highlightedRole").parent().offset().left);
         }else{
-            $this=$("#employee");
+            $this=$("#student");
             $(".workHeading .after").width(($this.offset().left+ $this.width())-$this.parent().offset().left);
             $(".role").removeClass("highlightedRole");
-            $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_employee");
+            $(".sidePane").removeClass("work_employee work_freelancer work_student").addClass("work_student");
             $this.addClass("highlightedRole");
             $(".workDescription").removeClass("display");
-            $("#employeeWork").addClass("display");
+            $("#studentWork").addClass("display");
+            $("body").scrollTop(0);
         }
     }
     
