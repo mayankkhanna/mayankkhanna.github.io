@@ -34,7 +34,6 @@ body
     -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
 }
-
 .work_employee
 {
     background-image:url("/Images/side_infy.jpg");
@@ -71,19 +70,19 @@ body
 
 .work_student
 {
-    background-image:url("/Images/side_college.jpg");
+    background-image:url("/Images/side_college.png");
     background-image: -webkit-gradient(
 	linear,
 	left top,
 	left bottom,
 	color-stop(0.2, black),
 	color-stop(0.6, transparent),
-    color-stop(0.94,black)), url("/Images/side_college.jpg");
-    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.jpg");
-    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.jpg");
-    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.jpg");
-    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_college.jpg");
-    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_college.jpg");
+    color-stop(0.94,black)), url("/Images/side_college.png");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.png");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.png");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/side_college.png");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/side_college.png");
+    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_college.png");
 }
 
 .side_labstorm
@@ -383,9 +382,24 @@ a.boldLink:hover{
     padding:10px 5px;
     cursor:pointer;
 }
+.newwork{
+    height: 202px;
+    background-size: 100%;
+    padding:0px;
+}
 
 .work>p{
     color:#444444;
+    margin-top:0px;
+}
+
+.newwork p{
+    color:white;
+    margin-left: 40px;
+    margin-top: 20px;
+    text-shadow:2px 2px 20px #000000;
+    font-weight:bold;
+    text-align:left;
 }
 
 .work h4 {
@@ -395,8 +409,20 @@ a.boldLink:hover{
     font-weight:300;
     display: inline-block;
     position: relative;
-    padding-bottom: 6px;
+    padding-bottom: 4px;
 }
+
+.newwork h4{
+    color: white;
+    margin: 40px 0px 0px 40px;
+    font-weight: bold;
+    display: inline-block;
+    position: relative;
+    padding-bottom: 15px;
+    font-size: 22px;
+    text-shadow: 2px 2px 20px #000000;
+}
+
 .work h4:after {
     content: '';
     display: block;
@@ -412,11 +438,32 @@ a.boldLink:hover{
     -o-transition:width .5s ease, background-color .5s ease;
     transition: width .5s ease, background-color .5s ease;
 }
+
+.newwork h4:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    -webkit-transition:width .5s ease, background-color .5s ease;
+    -moz-transition:width .5s ease, background-color .5s ease;
+    -ms-transition:width .5s ease, background-color .5s ease;
+    -o-transition:width .5s ease, background-color .5s ease;
+    transition: width .5s ease, background-color .5s ease;
+}
+
 .work:hover h4:after {
     width: 100%;
     background: #0A5DA6;
 }
 
+.newwork:hover h4:after {
+    width: 100%;
+    background: #ffffff;
+}
 .projectRole, .projectTechnologies{
     color: #0A5DA6;
     font-weight:300;
@@ -476,4 +523,105 @@ a.boldLink:hover{
 
 .footer:hover .footer-link{
     color:#333333;
+}
+
+/* project Detail*/
+.fa-nav{
+    font-size: 20px;
+    text-align: right;
+    color: white;
+    padding: 19px 23px;
+    border-bottom: 1px solid white;
+}
+.sidePaneProjectDetail
+{
+    width:60px;
+    float:left;
+    background-color:black;
+    height:100%;
+    position:fixed;
+    z-index:5;
+    -webkit-box-shadow:0px 5px 5px 1px #333333;
+    box-shadow:0px 5px 5px 1px #333333;
+}
+.sidePaneProjectDetail .nameHeading{
+    transform: rotate(270deg);
+    transform-origin: left top;
+    margin-left: 12px;
+    width: 200px;
+    position: absolute;
+    bottom:0px;
+}
+
+.mainPaneProjectDetail{
+    width: 80%;
+    float: left;
+    overflow-y: auto;
+    margin-left: 100px;
+}
+.mainPaneProjectDetail .footer{
+    border-top:1px solid silver;
+    color:silver;
+    font-size:12px;
+    width:100%;
+    margin:0px;
+}
+.mainPaneProjectDetail .heading{
+    font-size:40px;
+}
+.mainPaneProjectDetail .workDescription{
+    max-width: none;
+    text-align:left;
+}
+.mainPaneProjectDetail .workDescription .subheading{
+    font-size:22px;
+}
+.subheading .icon{
+    margin-right:10px;
+}
+.mainPaneProjectDetail .workDescription .two-part{
+    width:50%;
+    float:left;
+}
+.subheadingDescription{
+    color: #333333;
+    font-size:16px;
+    margin-bottom:30px;
+}
+
+.subheadingDescription img{
+    margin-top:15px;
+}
+.descriptionListing{
+    list-style-position: outside;
+    margin-left:10px;
+    font-size:18px;
+    padding-bottom:10px;
+}
+.descriptionListing li{
+    margin-bottom:15px;
+}
+.innerDesc{
+    margin-bottom: 15px;
+    display:block;
+}
+.innerDesc .innerTitle{
+    color:#888888;
+    font-weight:bold;
+}
+.blue{
+    color:#0A5DA6 !important;
+}
+.fourSection {
+font-size: 20px;
+text-align: center;
+display: block;
+float: left;
+width: 25%;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom:30px;
+}
+.fourSection .icon{
+    font-size:40px;
 }
