@@ -395,8 +395,8 @@ a.boldLink:hover{
 
 .newwork p{
     color:white;
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 25px;
+    margin-top: 10px;
     text-shadow:2px 2px 20px #000000;
     font-weight:bold;
     text-align:left;
@@ -414,11 +414,11 @@ a.boldLink:hover{
 
 .newwork h4{
     color: white;
-    margin: 40px 0px 0px 40px;
+    margin: 25px 0px 0px 25px;
     font-weight: bold;
     display: inline-block;
     position: relative;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     font-size: 22px;
     text-shadow: 2px 2px 20px #000000;
 }
