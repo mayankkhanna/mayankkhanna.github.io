@@ -386,6 +386,7 @@ a.boldLink:hover{
     height: 202px;
     background-size: 100%;
     padding:0px;
+    transition: box-shadow .5s ease;
 }
 
 .work>p{
@@ -396,10 +397,11 @@ a.boldLink:hover{
 .newwork p{
     color:white;
     margin-left: 25px;
-    margin-top: 10px;
-    text-shadow:2px 2px 20px #000000;
+    margin-top: 5px;
+    text-shadow:2px 2px 2px #000000;
     font-weight:bold;
     text-align:left;
+    font-size:15px;
 }
 
 .work h4 {
@@ -420,7 +422,7 @@ a.boldLink:hover{
     position: relative;
     padding-bottom: 10px;
     font-size: 22px;
-    text-shadow: 2px 2px 20px #000000;
+    text-shadow: 2px 2px 3px #000000;
 }
 
 .work h4:after {
@@ -453,6 +455,11 @@ a.boldLink:hover{
     -ms-transition:width .5s ease, background-color .5s ease;
     -o-transition:width .5s ease, background-color .5s ease;
     transition: width .5s ease, background-color .5s ease;
+    box-shadow:2px 2px 2px 0px #000000;
+}
+
+.work:hover{
+    box-shadow:5px 5px 10px 0px #888888;
 }
 
 .work:hover h4:after {
@@ -463,6 +470,17 @@ a.boldLink:hover{
 .newwork:hover h4:after {
     width: 100%;
     background: #ffffff;
+}
+
+.workTags{
+margin-top: 30px;
+float: left;
+margin-left: 25px;
+font-size: 13px;
+text-transform: uppercase;
+color: #ffffff;
+text-shadow: 2px 2px 2px #000000;
+font-weight: bold;
 }
 .projectRole, .projectTechnologies{
     color: #0A5DA6;
