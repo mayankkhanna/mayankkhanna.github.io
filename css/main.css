@@ -212,7 +212,26 @@ body
     background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/side_elgg.jpg");
 }
 
+.specialIcon{
+    font-size: 75px;
+    color: silver;
+    z-index: -9999999;
+    display: block;
+    position: absolute;
+}
 
+.specialIcon-left{
+    margin-left: 40px;
+    float: left;
+    margin-top: 86px;
+}
+
+.specialIcon-right{
+    float: right;
+    margin-right: 120px;
+    position: inherit;
+    margin-top: -100px;
+}
 
 h3.nameHeading{
     color:white;
@@ -340,6 +359,7 @@ a.boldLink{
     font-weight:bold;
     color:#0A5DA6;
     text-decoration: none;
+    padding-bottom: 1px;
 }
 a.boldLink:hover{
     text-decoration: none;
@@ -382,6 +402,7 @@ a.boldLink:hover{
     padding:10px 5px;
     cursor:pointer;
 }
+
 .newwork{
     height: 202px;
     background-size: 100%;
@@ -402,6 +423,10 @@ a.boldLink:hover{
     font-weight:bold;
     text-align:left;
     font-size:15px;
+}
+
+.visible{
+    opacity:1;
 }
 
 .work h4 {
@@ -458,7 +483,7 @@ a.boldLink:hover{
     box-shadow:2px 2px 2px 0px #000000;
 }
 
-.work:hover{
+.newwork:hover{
     box-shadow:5px 5px 10px 0px #888888;
 }
 
