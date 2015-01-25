@@ -355,21 +355,7 @@ a.link:hover, .projectLink:hover{
 .display{
     display:block;
 }
-a.boldLink{
-    font-weight:bold;
-    color:#0A5DA6;
-    text-decoration: none;
-    padding-bottom: 1px;
-}
-a.boldLink:hover{
-    text-decoration: none;
-    border-bottom:1px solid;
-    -webkit-transition: border 0.5s ease-in;
-    -ms-transition: border 0.5s ease-in;
-    -moz-transition: border 0.5s ease-in;
-    -o-transition: border 0.5s ease-in;
-    transition: border 0.5s in-out;
-}
+
 .workDescription > a{
     text-decoration:none;
 }
@@ -404,10 +390,12 @@ a.boldLink:hover{
 }
 
 .newwork{
-    height: 202px;
+    height: 201px;
     background-size: 100%;
     padding:0px;
     transition: box-shadow .5s ease;
+    background-repeat: no-repeat;
+    min-width:700px;
 }
 
 .work>p{
@@ -484,7 +472,7 @@ a.boldLink:hover{
 }
 
 .newwork:hover{
-    box-shadow:5px 5px 10px 0px #888888;
+    box-shadow:0px 5px 10px 0px #888888;
 }
 
 .work:hover h4:after {
@@ -667,4 +655,118 @@ margin-bottom:30px;
 }
 .fourSection .icon{
     font-size:40px;
+}
+
+a.boldLink{
+    font-weight:bold;
+    color:#0A5DA6;
+    text-decoration: none !important;
+    padding-bottom: 1px;
+}
+a.boldLink:hover{
+    text-decoration: none !important;
+    border-bottom:1px solid;
+    -webkit-transition: border 0.5s ease-in;
+    -ms-transition: border 0.5s ease-in;
+    -moz-transition: border 0.5s ease-in;
+    -o-transition: border 0.5s ease-in;
+    transition: border 0.5s in-out;
+}
+
+/*For roadmap Showcase*/
+.help-block {
+display: block;
+margin-top: 5px;
+margin-bottom: 40px;
+color: #737373;
+
+}
+
+.spotx {
+width: 20px;
+border-radius: 10px;
+background-color: #888;
+height: 20px;
+cursor: pointer;
+display: inline;
+margin: 0px;
+position: absolute;
+}
+.spot {
+width: 20px;
+border-radius: 10px;
+background-color: #888;
+height: 20px;
+display: block;
+margin-left: 25%;
+position: absolute;
+cursor: pointer;
+}
+
+.highlightSpot {
+background-color: #ED673B;
+width: 15px;
+height: 15px;
+border-radius: 100%;
+border: 5px solid #ffffff;
+-webkit-animation: effect 1.5s ease-in infinite;
+animation: effect 1.5s ease-in infinite;
+box-shadow: 0px 0px 3px 0px silver;
+}
+
+.mapDesc {
+margin-left: 20%;
+margin-top: 38px;
+position: relative;
+}
+
+.mapFlag {
+height: 22px;
+}
+
+.tripDesc {
+font-size: 20px;
+color: #ED673B;
+font-weight: 400;
+max-width: 300px;
+}
+
+.container{
+    display: block;
+float: left;
+width: 100%;
+margin-left: auto;
+margin-right: auto;
+margin-bottom:70px;
+position: relative;
+}
+
+.mapDesc {
+margin-left: 20%;
+margin-top: 38px;
+position: absolute;
+text-align:center;
+}
+
+.tripDesc {
+font-size: 20px;
+color: #ED673B;
+font-weight: 400;
+max-width: 300px;
+-webkit-margin-before: 0px;
+-webkit-margin-after: 0px;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes effect
+{
+from {border:5px solid #ffffff;background-color:#ED673B;}
+to {border:5px solid #ED673B;background-color:#ffffff;}
+}
+
+/* Standard syntax */
+@keyframes effect
+{
+from {border:5px solid #ffffff;background-color:#ED673B;}
+to {border:5px solid #ED673B;background-color:#ffffff;}
 }
