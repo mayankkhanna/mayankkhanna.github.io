@@ -739,6 +739,8 @@ margin-left: auto;
 margin-right: auto;
 margin-bottom:70px;
 position: relative;
+max-width:771px;
+min-width:771px;
 }
 
 .mapDesc {
