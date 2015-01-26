@@ -134,4 +134,4 @@ body{background:#fff}
 .prx-page.prx-page-transition-flip{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden}
 .prx-page.prx-page-transition-turn{-webkit-backface-visibility:hidden;-moz-backface-visibility:hidden;backface-visibility:hidden;-webkit-transform:translate3d(0,0,0);-moz-transform:translate3d(0,0,0);-webkit-transform-origin:0 center;-moz-transform-origin:0 center;transform-origin:0 center;transform:translate3d(0,0,0)}
 .prx-page.prx-page-transition-flow:not(.prx-page-transition-flow-overlay),.prx-page.prx-page-transition-overlay-top{box-shadow:0 0 20px rgba(0,0,0,.4)}
-.device-cursor-touch,.device-cursor-touch *{cursor:url(/images/player/touch-cursor-64.png) 32 32,pointer}
+.device-cursor-touch,.device-cursor-touch *{cursor:url(/Images/touch-cursor-64.png) 32 32,pointer}
