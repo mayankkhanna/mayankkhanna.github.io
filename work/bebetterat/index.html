@@ -85,6 +85,43 @@ Several approaches were laid-out and sketches were created to understand the use
 </ul>
 </p>
 <p class="subheadingDescription">
+<span class="innerDesc"><span class='innerTitle blue'>Wireframes |</span>
+Wireframing was done to conceptualize the flow and understand navigational elements.
+</span>
+</p>
+<ul id="jquery-demo2">
+  <li>
+    <a href="#slide1">
+      <img src="/Images/bba-1.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide2">
+      <img src="/Images/bba2.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/bba3.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/bba4.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/bba4.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/bba5.jpg" />
+    </a>
+  </li>
+</ul>
+<p class="subheadingDescription">
 <span class="innerDesc"><span class='innerTitle blue'>Paper Prototype |</span>
 The	prototype was created to test the functionality	related	to the login process,	
 searching for a	skill and requesting a skill.<br/>
@@ -96,9 +133,7 @@ other people if	he/she is not interested in	learning from friends the app highli
 <br/>
 <br/>
 <br/>
-<div class='footer'> This website is created using <a class='footer-link' href="http://pages.github.com/" target="_blank">Github Pages</a> and currently hosted by <a class='footer-link' href='http://github.com/'>Github</a>.
-    <br/>
-    Works fine on all modern browsers- Chrome, Firefox, Safari</div>
+<div class='footer'>&copy; 2015 Mayank Khanna  | Hand-crafted by <a class='boldLink' href="http://twitter.com/mynk_k" target="_blank">@mynk_k</a></div>
 </section>
 </body>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
@@ -107,6 +142,15 @@ other people if	he/she is not interested in	learning from friends the app highli
    jQuery('#jquery-demo').slippry({
   // general elements & wrapper
   slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+  // options
+  adaptiveHeight: false, // height of the sliders adapts to current slide
+  useCSS: false, // true, false -> fallback to js if no browser support
+  autoHover: false,
+  transition: 'horizontal'
+});
+   jQuery('#jquery-demo2').slippry({
+  // general elements & wrapper
+  slippryWrapper: '<div class="sy-box jquery-demo" style="width:300px; margin-left: auto;margin-right: auto;" />', // wrapper to wrap everything, including pager
   // options
   adaptiveHeight: false, // height of the sliders adapts to current slide
   useCSS: false, // true, false -> fallback to js if no browser support

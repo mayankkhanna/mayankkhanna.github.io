@@ -552,8 +552,9 @@ font-weight: bold;
     margin-left:100px;
     margin-right:100px;
     border-top:1px solid silver;
-    color:silver;
-    font-size:12px;
+    color:#666666;
+    font-size:15px;
+    padding-top: 10px;
 }
 
 .footer-link{
@@ -561,9 +562,6 @@ font-weight: bold;
     text-decoration:underline;
 }
 
-.footer:hover{
-    color:#666666;
-}
 
 .footer:hover .footer-link{
     color:#333333;
@@ -609,8 +607,8 @@ font-weight: bold;
 }
 .mainPaneProjectDetail .footer{
     border-top:1px solid silver;
-    color:silver;
-    font-size:12px;
+    color:#666666;
+    font-size:15px;
     width:100%;
     margin:0px;
 }
