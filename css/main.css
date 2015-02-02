@@ -8,31 +8,36 @@ body
 
 .sidePane
 {
-    width:25%;
+    width:18%;
     float:left;
     background-color:black;
-    min-width:300px;
+    min-width:220px;
     height:100%;
     position:fixed;
-    background-image:url("/Images/me.jpg");
+    background-image:url("/Images/me1.png");
     background-image: -webkit-gradient(
 	linear,
 	left top,
 	left bottom,
-	color-stop(0.2, black),
+	color-stop(0.3, black),
 	color-stop(0.6, transparent),
-    color-stop(0.94,black)), url("/Images/me.jpg");
-    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me.jpg");
-    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me.jpg");
-    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me.jpg");
-    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/me.jpg");
-    background-image: linear-gradient(to bottom, black 20%, transparent, black 94%), url("/Images/me.jpg");
+    color-stop(0.88,black)), url("/Images/me1.png");
+    background-image: -webkit-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me1.png");
+    background-image: -o-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me1.png");
+    background-image: -ms-linear-gradient(bottom, black 6%, transparent,black 75%), url("/Images/me1.png");
+    background-image: -moz-linear-gradient(linear, black 6%, transparent, black 75%), url("/Images/me1.png");
+    background-image: linear-gradient(to bottom, black 30%, transparent, black 88%), url("/Images/me1.png");
     z-index:5;
     background-size: 100%, 100% auto;
     background-repeat:no-repeat;
     background-position: 0 78%;
     -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
+    -webkit-transition: background-image 10s ease;
+    -moz-transition: opacity .5s ease, border-color .5s ease;
+    -ms-transition: opacity .5s ease, border-color .5s ease;
+    -o-transition: opacity .5s ease, border-color .5s ease;
+    transition: background-image 10s ease;
 }
 .work_employee
 {
@@ -234,9 +239,16 @@ body
 }
 
 h3.nameHeading{
+    font-family:'Raleway', 'sans-serif';
     color:white;
     margin-left:30px;
-    font-size:25px;
+    font-size:28px;
+    font-weight:normal;
+}
+
+h3.nameHeading .highlight{
+    font-weight:bold;
+    display:block;
 }
 
 h3.nameHeading a,h3.nameHeading:hover a, h3.nameHeading a:visited{
@@ -246,26 +258,29 @@ h3.nameHeading a,h3.nameHeading:hover a, h3.nameHeading a:visited{
 
 
 .navigationlink{
+    font-family: 'Raleway',sans-serif;
     display:block;
     color:white;
-    margin-left:35px;
+    margin-left:30px;
     margin-right:35px;
     margin-top:5px;
     font-size:18px;
     text-decoration:none;
     font-weight:600;
     padding-bottom:2px;
+    opacity:0.9;
     border-bottom:2px solid transparent;
-    -webkit-transition: border-color .5s ease;
-    -moz-transition: border-color .5s ease;
-    -ms-transition: border-color .5s ease;
-    -o-transition: border-color .5s ease;
-    transition: border-color .5s ease;
+    -webkit-transition: opacity .5s ease, border-color .5s ease;
+    -moz-transition: opacity .5s ease, border-color .5s ease;
+    -ms-transition: opacity .5s ease, border-color .5s ease;
+    -o-transition: opacity .5s ease, border-color .5s ease;
+    transition: opacity .5s ease, border-color .5s ease;
 }
 
 .navigationlink:hover{
     text-decoration:none;
     border-bottom-color:white;
+    opacity:1.0;
 }
 
 .navigationlink:active{
@@ -277,7 +292,7 @@ h3.nameHeading a,h3.nameHeading:hover a, h3.nameHeading a:visited{
     bottom:0px;
     position:absolute;
     color:white;
-    margin-left:35px;
+    margin-left:50px;
     margin-bottom:20px;
     font-size:10px;
 }
@@ -301,7 +316,7 @@ a.link:hover, .projectLink:hover{
 
 .mainPane
 {
-    width:75%;
+    width:80%;
     float:right;
     overflow-y:auto;
 }
@@ -407,8 +422,7 @@ a.link:hover, .projectLink:hover{
     color:white;
     margin-left: 25px;
     margin-top: 5px;
-    text-shadow:2px 2px 2px #000000;
-    font-weight:bold;
+    text-shadow:2px 1px 2px #000000;
     text-align:left;
     font-size:15px;
 }
@@ -435,7 +449,7 @@ a.link:hover, .projectLink:hover{
     position: relative;
     padding-bottom: 10px;
     font-size: 22px;
-    text-shadow: 2px 2px 3px #000000;
+    text-shadow: 0px 0px 1px rgba(0,0,0,0.4);
 }
 
 .work h4:after {
@@ -468,7 +482,6 @@ a.link:hover, .projectLink:hover{
     -ms-transition:width .5s ease, background-color .5s ease;
     -o-transition:width .5s ease, background-color .5s ease;
     transition: width .5s ease, background-color .5s ease;
-    box-shadow:2px 2px 2px 0px #000000;
 }
 
 .newwork:hover{
@@ -579,9 +592,13 @@ font-weight: bold;
     transform: rotate(270deg);
     transform-origin: left top;
     margin-left: 12px;
-    width: 200px;
+    width: 300px;
     position: absolute;
     bottom:0px;
+}
+
+.sidePaneProjectDetail .nameHeading .highlight{
+    display:inline;
 }
 
 .mainPaneProjectDetail{
@@ -771,4 +788,8 @@ to {border:5px solid #ED673B;background-color:#ffffff;}
 {
 from {border:5px solid #ffffff;background-color:#ED673B;}
 to {border:5px solid #ED673B;background-color:#ffffff;}
+}
+
+.fa1{
+    font-size:20px;
 }

@@ -20,37 +20,52 @@
 <h3 class='nameHeading'><a href='/'><span class="highlight">Mayank</span> Khanna</a></h3>
 </section>
 <section class="mainPaneProjectDetail">
-<div class='heading'>Exploring human curated playlists using social tags</div>
+<div class='heading'>For the love of wireframing</div>
 <div class='workDescription display' id='employeeWork'>
-<p class="subheading blue"><span class="icon icon-documents-bookmarks-01"></span>Project Summary</p>
 <p class="subheadingDescription">
-    <a href="http://8tracks.com" target="_blank">8Tracks</a> is a social platform that allows users to
-curate their own playlists. While the platform has a nice mechanism of creating or listening to playlists, the unique feature about the website is the ability to discover these playlists. The platform allows the user to select a combination of three or less tags based on their mood, music genre or artist and presents the user with a series of playlists that comprise of those tags. Since the playlists are user created, the tags present on the playlists are also user-generated, which gives the entire concept of discovering music a more humane approach compared to traditional approaches of searching for tracks or playlists using text-based search.<br/>
-While, I have always been amazed by the kind of music I get to hear on the 8Tracks platform, I was always interested in finding out that how well the platform is able to satisfy the music informational need of other users and how satisfied do the users feel listening to the music that comes up based on three or less tag choices of theirs. For this reason, I chose to study the user behavior of using 8Tracks while searching for music of their own interest.
+   I really enjoy creating quick low-fidelity wireframes around concepts. Some of these pieces are works in progress and some of them were just used to ideate quickly for a concept.<br/>
+    Hope you enjoy seeing these as much as I enjoyed creating them.
+</p>
+<p class="subheading blue"><span class="icon icon-shopping-03"></span> Lifesaver</p>
+<p class="subheadingDescription">
+   A Gamified iPad application that allows the user to keep track of his savings. Apart from tracking the current savings, it helps him/her to set goals and achieve them.<br/>
+  The application also educates the user on how he should plan his savings based on his existing profile and recommends tenure-based goals based on his current age.
 </p>
 <ul id="jquery-demo">
   <li>
     <a href="#slide1">
-      <img src="/Images/8tracks-explore-fig1.png" alt="The user selects a combination of tags</a>">
+      <img src="/Images/lifesaver-1.jpg"  alt="Homescreen showcases all the goals user has configured">
     </a>
   </li>
   <li>
     <a href="#slide2">
-      <img src="/Images/8tracks-explore-fig2.png"  alt="The playlist feed updates as the user selects tags">
+      <img src="/Images/lifesaver-2.jpg"  alt="The individual goal screen indicates the user progress on that goal">
     </a>
   </li>
   <li>
     <a href="#slide3">
-      <img src="/Images/8tracks-explore-fig3.png" alt="The user can click on a selected tag to remove it">
+      <img src="/Images/lifesaver-3.jpg"  alt="The side navigation and other features of the application">
     </a>
   </li>
 </ul>
-<p class="subheading blue"><span class="icon icon-chat-messages-08"></span>Research Questions</p>
-<p class="subheadingDescription">While I have always been amazed by the kind of music I get to hear on the 8Tracks platform, I was always interested in finding out that how well the platform is able to satisfy the music informational need of other users and how satisfied do the users feel listening to the music that comes up based on three or less tag choices of theirs. For this reason, I chose to study the user behavior of while using 8Tracks for searching music. The questions I was trying to answer through this study are:</p>
-<ul class="descriptionListing blue">
-<li>How the use of tags selection for getting a list of music playlists influence the user's search experience when listening to online radio?</li>
-<li>Does prior knowledge about the tags make it even more convenient for users to perform the search process?</li>
-<li>Whether a use of tag-based methodology leads to lesser cognitive effort and allows user to focus more on the content retrieved than on the search process?</li>
+<p class="subheading blue"><span class="icon icon-party-05"></span>SugarBuddy</p>
+<p class="subheadingDescription">An app that assists young children with Diabetes in understanding their health symptoms</p>
+<ul id="jquery-demo2">
+  <li>
+    <a href="#slide1">
+      <img src="/Images/sugarbuddy-1.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide2">
+      <img src="/Images/sugarbuddy-2.jpg" />
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/sugarbuddy-3.jpg" />
+    </a>
+  </li>
 </ul>
 <p class="subheading blue"><span class="icon icon-faces-users-04"></span>User Sampling</p>
 <p class="subheadingDescription"><span class="innerDesc"><span class='innerTitle blue'>Sample Size |</span>
@@ -139,16 +154,24 @@ The results of the study are surely not at a quantifiable level to judge trends 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
 <script type="text/javascript" src="/js/slippry.min.js"></script>
 <script>
-   jQuery('#jquery-demo, #jquery-demo2').slippry({
+   jQuery('#jquery-demo').slippry({
   // general elements & wrapper
-  slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+  slippryWrapper: '<div class="sy-box jquery-demo" style="width: 500px;margin-left: auto;margin-right: auto;" />', // wrapper to wrap everything, including pager
   // options
   adaptiveHeight: false, // height of the sliders adapts to current slide
   useCSS: false, // true, false -> fallback to js if no browser support
   autoHover: false,
   transition: 'horizontal'
 });
-    
+  jQuery('#jquery-demo2').slippry({
+  // general elements & wrapper
+  slippryWrapper: '<div class="sy-box jquery-demo" style="width:300px; margin-left: auto;margin-right: auto;" />', // wrapper to wrap everything, including pager
+  // options
+  adaptiveHeight: false, // height of the sliders adapts to current slide
+  useCSS: false, // true, false -> fallback to js if no browser support
+  autoHover: false,
+  transition: 'horizontal'
+});
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
