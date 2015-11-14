@@ -1,0 +1,286 @@
+<html>
+<head>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans|Playfair+Display' rel='stylesheet' type='text/css'>
+<!--<link href='jquery.fullPage.css' rel='stylesheet' type='text/css'>-->
+<style>
+	body{
+		font-family: 'Open sans', sans-serif;
+		background-color:linen;
+	}
+	.first{
+	}
+	
+	.heading{
+    	font-size: 50px;
+    	color: #B8BAB7;
+		font-family: "Open sans", serif;
+	}
+	.highlight{
+		color: black;
+    	font-size: 60px;
+    	font-family: 'Playfair Display', sans-serif;
+    	top: -40px;
+    	position: relative;
+	}
+	
+	.definition{
+		font-size:28px;
+		color:#333333;
+		width:400px;
+	}
+	.section
+	{
+		height:100%;
+		background-color:white;
+		padding:25px;
+	}
+	
+	.initial{
+		transform: rotate(180deg) translate(-500px,450px);
+	}
+	.action{
+		font-size:20px;
+		color:gray;
+	}
+	button {
+		border: 2px solid black;
+		padding: 7px 40px;
+		background-color: transparent;
+		color: black;
+		font-family: "Playfair Display";
+		font-size: 15px;
+	}
+</style>
+</head>
+<body>
+	<div id="fullPage" class="first">
+		<div class="section" id="one" styel="height:80%;">
+			<p class="heading">
+				<a class="highlight" style="top:0px;">Koch Curve</a>
+				<p class="definition" style="margin-top:-40px;">
+			It is a mathematical curve described by Helge von Koch.
+			It is a piece of a larger fractal, the <b>Koch Snowflake</b>
+			and is built on the concept of recursion.
+			</p>
+				<input id="slider" type ="range" min ="0" max="6" step ="1.0" value="0" style="width:290px;"/>
+				<p class="action">Drag the slider to see the curve</p>
+			</p>
+				<svg width="90%" height="450px" style="transform: rotate(180deg) translate(-250px,400px)">
+					<line x1="150" x2="950" y1="50" y2="50" stroke-width="2" stroke="blue"/>
+			</svg>
+		</div>
+	    <br/><br/>
+		<div class="section" id="two" style="height:80%;">
+			<p class="heading">So How does it use <br/>
+				<a class="highlight">Recursion?</a>
+			</p>
+			<p class="definition" style="margin-top:-60px;">
+			The process of repeating items in a self-similar way.
+			</p>
+			<br/>
+			<p class="definition" style="margin-top:-10px; font-size:20px">
+			Each line divides itself to form a new curve. The first curve generates at Iteration 1.
+			</p>
+			<p><button id="iteration_button">Start</button></p>
+		</div>
+	    <br/><br/>
+		<div class="section" id="three" style="height:100%">
+			<p class="heading">What if we repeat it along every<br/>
+				<a class="highlight">edge of a Triangle</a>
+				<p class="definition" style="margin-top:-40px;float:left;">
+			Koch curve along every edge of the triangle is the Koch Snowflake.
+			Since the number of edges in the snowflake increase (4*3) times,
+			it has an &infin; perimeter.
+			<br/><br/>
+					<button class="flake">Click to see the next stage</button>
+			</p>
+			
+			<svg width="60%" height="100%" style="float:right; margin-top:-125px">
+			<line x1='400' x2='150' y1='10' y2='443' stroke-width='2' stroke='blue'/>
+			<line x1='150' x2='650' y1='443' y2='443' stroke-width='2' stroke='blue'/>
+			<line x1='650' x2='400' y1='443' y2='10' stroke-width='2' stroke='blue'/>
+			</svg>
+		</div>
+	    <br/><br/>
+		<div class="section" id="four">
+			<p class="heading">What happens when we zoom on the<br/>
+				<a class="highlight">Koch curve</a>
+				<p class="definition" style="margin-top:-40px;float:left;">
+				The pattern keeps on repeating as we zoom into the curve.
+				<br/><br/>
+				<a class="action">Click on the curve to begin zoom</a>
+			</p>
+			
+			<svg width="100%" height="60%" style="float:right; transform: rotate(180deg) translate(90px,125px)">
+			<line x1='20' x2='1020' y1='100' y2='100' stroke-width='2' stroke='blue'/>
+			</svg>
+		</div>
+	</div>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		//var shape_count=0;
+		$(".flake").on("click",function(){
+			 	d3.select("#three svg").selectAll("line").each(createKoch);
+		});
+		
+		$("#slider").on("change mousemove", function(){special($(this).val())});
+		
+		function special(value){
+			d3.select("#one svg").selectAll("line").remove();
+			d3.select("#one svg").append("line").attr("class",value).attr("x1",150).attr("y1", 50).attr("x2",950).attr("y2",50).attr("stroke","blue");
+			for(i=1; i<=value; i++){
+				 d3.select("#one svg").selectAll("line").each(createKoch);
+			}
+		}
+		
+	var svgContainer=d3.select("body #two").append("svg")
+						   .attr("class","initial").attr("width",600).attr("height",600);
+				  
+	var line=svgContainer.append("g").append("line");
+		
+            line.attr("x1", 5)
+                .attr("y1", 450)
+				.attr("x2", 405)
+                .attr("y2", 450)
+			    .attr("stroke-width",2).attr("stroke","blue");
+	
+	var x=0;
+		
+	$("#iteration_button").on("click",function(){
+		if($(this).hasClass("reset")){
+		  svgContainer.selectAll("*").remove();
+		   var line=svgContainer.append("g").append("line");
+		
+            line.attr("x1", 5)
+                .attr("y1", 450)
+				.attr("x2", 405)
+                .attr("y2", 450)
+			    .attr("stroke-width",2).attr("stroke","blue");
+			
+			x=0;
+		}else{
+		   setInterval(iterate,1250);
+		   $("#iteration_button").text("Reset").attr("class","reset");
+		}
+	});
+						   
+		var scale;
+		
+	function iterate(){
+		var count=svgContainer.selectAll("g").size();
+		if(count < 4){
+		var last_group=svgContainer.selectAll("g").select(function(d,i){
+			  if(i==count-1){
+				  return d3.select(this).html();
+			  }
+		});
+		
+		var group=svgContainer.append("g")
+							  .attr("transform","translate(0,"+x+")").html(last_group);
+		x-=125;
+		group.selectAll("text").remove();
+		group.transition().duration(500).delay(500).attr("transform","translate(0,"+x+")")
+						  .selectAll("line").each(createKoch);
+			
+		if(count<2){
+			/*var arc=d3.svg.arc().startAngle(Math.PI/180).endAngle((Math.PI/180)*60).innerRadius(2).outerRadius(2);
+			group.append("path").attr("fill","silver").attr("d",arc);*/
+		  group.append("text").attr("x",265).attr("y",455).attr("transform","rotate(180,265,455)").attr("font-size","10px").attr("fill","#333333").html("60 deg");
+
+group.append("text").attr("x",170).attr("y",455).attr("transform","rotate(180,170,455)").attr("font-size","10px").attr("fill","#333333").html("60 deg");
+		}
+		group.append("text").attr("x",405).attr("y",450).attr("transform","rotate(90,405,450)").attr("font-size","10px").attr("fill","#333333").html("Iteration "+count);
+			
+		}
+	}
+		
+	var createKoch= function (d,i){ 
+		if(i%2!=0){color="red";}else{color="blue"};
+		var P1={x:Number(d3.select(this).attr("x1")), y:Number(d3.select(this).attr("y1"))};
+		var P5={x:Number(d3.select(this).attr("x2")), y:Number(d3.select(this).attr("y2"))};
+		
+		var P2 = { x: (2 * P1.x + P5.x) / 3, y: (2 * P1.y + P5.y) / 3 };	
+			
+		var P4 = { x: (P1.x + 2 * P5.x) / 3, y: (P1.y + 2 * P5.y) / 3 };	
+			
+		var P3x = P2.x + P4.x * Math.cos(60 * Math.PI / 180) - P4.y * Math.sin(60 * Math.PI / 180) - P2.x * Math.cos(60 * Math.PI / 180) + P2.y * Math.sin(60 * Math.PI / 180);
+			
+		var P3y = P2.y + P4.x * Math.sin(60 * Math.PI / 180) + P4.y * Math.cos(60 * Math.PI / 180) - P2.x * Math.sin(60 * Math.PI / 180) - P2.y * Math.cos(60 * Math.PI / 180);
+			
+		var P3 = { x: P3x, y: P3y };
+		
+		var parent=d3.select(this.parentNode);
+		//parent.attr("class","Koch").attr("stroke","url(#line-gradient)");
+		
+		parent.append("line")
+					  .attr("stroke",color)
+		  			  .attr("stroke-width",2)
+			  		  .attr("x1",P1.x)
+					  .attr("x2",P2.x)
+					  .attr("y1",P1.y)
+					  .attr("y2",P2.y);
+		parent.append("line")
+					  .attr("stroke",color)
+		  			  .attr("stroke-width",2)
+			  		  .attr("x1",P2.x)
+					  .attr("x2",P3.x)
+					  .attr("y1",P2.y)
+					  .attr("y2",P3.y);
+		parent.append("line")
+					  .attr("stroke",color)
+		  			  .attr("stroke-width",2)
+			  		  .attr("x1",P3.x)
+					  .attr("x2",P4.x)
+					  .attr("y1",P3.y)
+					  .attr("y2",P4.y);
+		parent.append("line")
+					  .attr("stroke",color)
+		  			  .attr("stroke-width",2)
+			  		  .attr("x1",P4.x)
+					  .attr("x2",P5.x)
+					  .attr("y1",P4.y)
+					  .attr("y2",P5.y);
+		d3.select(this).remove();
+		
+	}
+	
+	var state=0;
+	
+	function infinite_curve(){
+		var x1=d3.select("#four svg").select("line").attr("x1");
+		var count=d3.select("#four svg").selectAll("line").size();
+		var x2;
+		d3.select("#four svg").selectAll("line").each(function(d,i){
+			if(i==count-1){
+				x2=d3.select(this).attr("x2");
+			}
+		})
+		var length=(x2-x1)/2;
+		var height=Math.sin((60*Math.PI)/180)*length;
+		if(state==0){
+		d3.select("#four svg").selectAll("line").transition().duration(1000).attr("transform","scale(0.5) translate("+length+","+height+")");
+		state=1;
+		}else{
+			d3.select("#four svg").selectAll("line").transition().duration(1000).attr("transform","scale(1)");
+			state=0;
+		}
+	}
+	
+	
+	for(i=0; i<5;i++){
+		d3.select("#four svg").selectAll("line").each(createKoch);
+	}
+	infinite_curve();
+		
+	d3.select("#four svg").on("click",illusion);
+	
+	function illusion(){
+		setInterval(infinite_curve, 1500);
+	}
+	
+	
+	</script>
+	
+</body>
+</html>
