@@ -1,0 +1,199 @@
+/*
+Plugin: jQuery Parallax
+Version 1.1.3
+Author: Ian Lunn
+Twitter: @IanLunn
+Author URL: http://www.ianlunn.co.uk/
+Plugin URL: http://www.ianlunn.co.uk/plugins/jquery-parallax/
+
+License: http://creativecommons.org/licenses/by-sa/3.0/ (Attribution Share Alike). Please attribute work to Ian Lunn simply by leaving these comments in the source code or if you'd prefer, place a link on your website to http://www.ianlunn.co.uk/.
+*/
+
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	min-width: 980px;
+	padding: 0;
+}
+
+p{
+	margin: 0 0 20px 0;	
+}
+
+#second_p {
+	margin: 0 50px 70px 50px;
+}
+
+#second_h1 {
+	margin: 0 50px 20px 50px;
+}
+
+iframe {
+	margin-left:50px;
+}
+
+p, ul{
+	font-family:"Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;
+	font-size-adjust:0.488;
+	font-weight:200;
+	font-style:normal;
+}
+
+img{
+	border: 0;
+}
+
+h1, #pixels{
+	font-family:"Museo 900", Verdana, serif;
+	font-size-adjust:0.40;
+	font-weight:700;
+	font-style:normal;
+}
+
+h2{
+	font-family:"Beau Sans Pro Book", Verdana, sans-serif;
+	font-size-adjust:0.531;
+	font-weight:500;
+	font-style:normal;
+}
+
+#intro h1 {
+	color: orange;
+	font-family: 'Marcellus', serif;
+}
+
+#intro h3, h4 {
+	color: black;
+	font-family: 'Marcellus', serif;
+}
+
+#second h1 {
+	color: white;
+	font-family: 'Marcellus', serif;
+}
+
+#second h3 {
+	color: black;
+	font-family: 'Marcellus', serif;
+}
+
+#third h1 {
+	color: black;
+	font-family: 'Marcellus', serif;
+}
+
+#third h3 {
+	color: black;
+	font-family: 'Marcellus', serif;
+}
+
+#header h1, #pixels{
+	color: #48941A;
+}
+
+.float-left{
+	float: left;	
+	margin: 0 0 0 50px;
+}
+
+.float-right{
+	float: right;
+	margin: 0 20px 0;
+}
+
+.center{
+	font-size: 2.5em;
+	padding: 80px 0 0 0;
+	text-align: center;
+}
+
+#nav{
+	list-style: none;
+	position: fixed;
+	right: 30px;
+	top: 60px;
+}
+
+#nav li{
+	margin: 0 0 15px 0;	
+}
+
+#header, #intro, #second{
+	width: 100%;
+}
+
+#intro{
+	background:url(images/modi_intro.png) 50% 0 no-repeat fixed;
+	color: black;
+	height: 700px;
+	margin: 0 auto;
+	padding: 0;
+}
+
+#second{
+	background: url(images/twitter_indianflag.png) 50% 0 no-repeat fixed;
+	color: white;
+	height: 800px;
+	margin: 0 auto;
+	overflow: hidden;
+	padding: 0;
+}
+
+#third{
+    background: url(images/third_slide.png) 50% 0 no-repeat fixed;
+	color: black;
+	height: 1000px;
+	margin: 0 auto;
+	padding: 0px;	
+}
+
+#fifth{
+	background: #ccc;
+	height: 2000px;
+	margin: 0 auto;
+	padding: 0 0 0 0;
+	width:1800px;
+}
+
+.story_intro{
+	margin: 0 0;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story_second{
+	margin: 0 80px;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story_viz{
+	margin: 0 0;
+	min-width: 980px;
+	overflow: auto;
+	width: 1800px;
+}
+
+.story_third .float-left{
+	margin: 400px 35px;
+	min-width: 980px;
+	overflow: auto;
+	width: 980px;
+}
+
+.story_intro .float-left, .story_intro .float-right{
+	padding: 50px 0 0 0;
+	position: relative;
+	width: 500px;	
+}
+
+.story_second .second_story{
+	padding: 100px 0 0 0;
+	float: right;
+	width: 800px;
+	margin: 0 50px 0 50px;	
+}
