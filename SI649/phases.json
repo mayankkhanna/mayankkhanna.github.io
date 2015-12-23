@@ -1,0 +1,10 @@
+{"Overall": ["Political Callout (252)", "Election Campaigning (247)", "Technology (219)",
+"International (213)", "Development (204)"],
+ "Phase1": ["Education (57)", "Development (50)", "Initiative (47)",
+"Hinduism (46)", "International (46)"],
+ "Phase2": ["Vivekananda (123)", "Quote (115)", "Youth (44)", "Criticism (41)", "Congress (39)"],
+ "Phase3": ["Development (30)", "Initiative (29)", "BJP (27)", "Agriculture (26)", "Education (25)"],
+ "Phase4": ["Election Campaigning (198)", "Congress (54)", "Opposition (54)", "Technology (54)", "Development (40)"],
+ "Phase5": ["Political Callout (64)", "Foreign Affairs (47)", "Citizen Callout (46)", "Swachch Bharat (45)", "Youth (44)"],
+ "Phase6": ["Political Callout (101)", "Birthday (94)", "International (92)", "Foreign Affairs (82)", "Technology (43)"]
+}

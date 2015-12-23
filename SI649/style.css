@@ -150,10 +150,15 @@ h2{
 
 #fifth{
 	background: #ccc;
-	height: 2000px;
 	margin: 0 auto;
 	padding: 0 0 0 0;
 	width:1800px;
+}
+#fifth h1 {
+	color: black;
+	font-family: 'Marcellus', serif;
+	margin-left:50px;
+	padding-top:30px;
 }
 
 .story_intro{
@@ -174,7 +179,6 @@ h2{
 	margin: 0 0;
 	min-width: 980px;
 	overflow: auto;
-	width: 1800px;
 }
 
 .story_third .float-left{

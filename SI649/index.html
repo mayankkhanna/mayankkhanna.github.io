@@ -111,6 +111,7 @@ svg {
   </div> <!--#third-->
   
   <div id="fifth">
+    <h1>Virality, Message Type, and Themes of Tweets from 2009-2015</h1>
     <div class="story_viz">
     <!-- where the visualizations go -->   
     </div> <!--.story-->
@@ -195,7 +196,7 @@ function myFunction3() {
 
 var margin = {top: 20, right: 300, bottom: 100, left: 50},
     margin2 = { top: 430, right: 10, bottom: 40, left: 40 },
-    width = 960 - margin.left - margin.right,
+    width = 820 - margin.left - margin.right,
     height = 500 - margin.top - margin.bottom,
     height2 = 500 - margin2.top - margin2.bottom;
 
@@ -248,9 +249,9 @@ var line = d3.svg.line()
 
 var maxY; // Defined later to update yAxis
 
-var svg = d3.select(".story_viz").append("svg").attr("class","timeline").attr("style","float:left; margin-left:50px; margin-top:50px;")
+var svg = d3.select(".story_viz").append("svg").attr("class","timeline").attr("style","float:left; margin-left:50px; margin-top:-50px;")
     .attr("width", width + margin.left + margin.right+100)
-    .attr("height", height + margin.top + margin.bottom+2000); //height + margin.top + margin.bottom
+    .attr("height", 800); //height + margin.top + margin.bottom
 
   svg.append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
@@ -287,7 +288,7 @@ svg.append("defs")
 
 d3.tsv("data1_log.tsv", function(error, data) { 
   color.domain(d3.keys(data[0]).filter(function(key) { // Set the domain of the color ordinal scale to be all the csv headers except "date", matching a color to an issue
-  	console.log(data[0]);
+  	//console.log(data[0]);
     return (key !== "date" && key !=="Impevents"); 
   }));
 
@@ -365,7 +366,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
   // draw line graph
   svg.append("g")
       .attr("class", "x axis")
-      .attr("transform", "translate(0," + (height-70) + ")")
+      .attr("transform", "translate(0," + height + ")")
       .call(xAxis);
 
   svg.append("g")
@@ -373,12 +374,12 @@ d3.tsv("data1_log.tsv", function(error, data) {
       .call(yAxis)
     .append("text")
       .attr("transform", "rotate(-90)")
-      .attr("y", 6)
-      .attr("x", -10)
+      .attr("y", 4)
+      .attr("x", -150)
       .attr("dy", ".71em")
       .style("text-anchor", "end")
-      .style("font-weight", "bold")
-      .text("Log(Amount of ---)");
+      .style("font", "Proxima Nova Light")
+      .text("Log(#)");
 
   var issue = svg.selectAll(".issue")
       .data(categories) // Select nested data and append to new svg group elements
@@ -392,7 +393,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
         return "line-" + d.name.replace(" ", "").replace("/", ""); // Give line id of line-(insert issue name, with any spaces replaced with no spaces)
       })
       .attr("d", function(d) { 
-	    console.log(d.visible);
+	    //console.log(d.visible);
         return d.visible ? line(d.values) : null; // If array key "visible" = true then draw line, if not then don't 
       })
       .attr("clip-path", "url(#clip)")//use clip path to make irrelevant part invisible
@@ -441,8 +442,8 @@ d3.tsv("data1_log.tsv", function(error, data) {
   issue.append("rect")
       .attr("width", 10)
       .attr("height", 10)                                    
-      .attr("x", width + (margin.right/3)+200) 
-      .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace) - 8; })  // spacing
+      .attr("x", 25) 
+      .attr("y", function (d, i) { return 10+i*20; })  // spacing
       .attr("fill",function(d) {
         return d.visible ? color(d.name) : "#F1F1F2"; // If array key "visible" = true then color rect, if not then make it grey 
       })
@@ -532,8 +533,8 @@ d3.tsv("data1_log.tsv", function(error, data) {
       })
       
   issue.append("text")
-      .attr("x", width + (margin.right/3) + 230) 
-      .attr("y", function (d, i) { return (legendSpace+1)+i*(legendSpace+1); })  // (return (11.25/2 =) 5.625) + i * (5.625) 
+      .attr("x", 45) 
+      .attr("y", function (d, i) { return 20+i*20; })  // (return (11.25/2 =) 5.625) + i * (5.625) 
       .text(function(d) { return d.name; }); 
 
   // Hover line 
@@ -553,7 +554,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
             .attr("class", "hover-text")
             .attr("y", height - (height-40)) // hover date text position
             .attr("x", width - 150) // hover date text position
-            .style("fill", "#555");
+            .style("fill", "#999");
 
 
   d3.tsv("data1.tsv", function(error, data1) { 
@@ -615,8 +616,8 @@ d3.tsv("data1_log.tsv", function(error, data) {
 
   focus_1.append("text") // http://stackoverflow.com/questions/22064083/d3-js-multi-series-chart-with-y-value-tracking
         .attr("class", "tooltip_raw")
-        .attr("x", width + 230) // position tooltips  
-        .attr("y", function (d, i) { return (legendSpace)+i*(legendSpace); }); 
+        .attr("x", 120) // position tooltips  
+        .attr("y", function (d, i) { return 20+i*20; }); 
 
   // Add mouseover events for hover line.
   d3.select("#mouse-tracker") // select chart plot background rect #mouse-tracker
@@ -689,7 +690,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
           }
         }
 
-        var tweet = svg.selectAll(".tweet")
+        /*var tweet = svg.selectAll(".tweet")
           .data(individualtweet)
         .enter().append("g")
           .attr("class", "tweet");   
@@ -715,7 +716,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
               return ("Tweet " + (i+1) + ": " + d.trim()); 
             }
           )
-          .call(wrap2, 600); 
+          .call(wrap2, 600); */
       });
       
       d3.tsv("data3.tsv", function(error, data3) { 
@@ -749,7 +750,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
       //console.log(eventdescriptions);
 
       var eventdesc = svg.append("g") // Event container
-          .attr("transform", "translate(" + 630 + "," + 215 + ")")
+          .attr("transform", "translate(" + 590 + "," + 580 + ")")
           .attr("class", "eventdesc");
 
       var eventdesc2 = svg.selectAll(".eventdesc")
@@ -757,7 +758,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
 
       //EVENT TITLE
       eventdesc2.append("text")
-        .attr("transform", "translate(0," + (height2-30) + ")")
+        .attr("transform", "translate(0," + (height2-50) + ")")
             .text(function(d,i) { 
               for (var j = 0; j < events.length; j++){
                 if (typeof  events[j] != "undefined") {
@@ -766,18 +767,18 @@ d3.tsv("data1_log.tsv", function(error, data) {
                     var eventsarray = events[j].values;
                     for (var k = 0; k < eventsarray.length; k++){
                       if (typeof  eventsarray[k] != "undefined") {
-                        return ("Important Event Date: " + format2(graph_x))
+                        return ("Event Date: " + format2(graph_x))
                       }
                     }
                   }
                 }
               }
             })
-          .style("font-weight", "bold");
+          .style("font-size", "20px;");
 
       eventdesc2.append("text") 
             .attr("class", "eventdesctext")
-            .attr("transform", "translate(0," + (height2+15) + ")")
+            .attr("transform", "translate(0," + height2-30 + ")")
             .text(function(d,i) { 
               for (var j = 0; j < events.length; j++){
                 if (typeof  events[j] != "undefined") {
@@ -789,18 +790,18 @@ d3.tsv("data1_log.tsv", function(error, data) {
                       // console.log(eventsarray[k]);
                       if (typeof  eventsarray[k] != "undefined") {
                         //console.log(eventsarray[k].value);
-                        return ("Main Tweet: " + eventsarray[k].value);
+                        return ("Tweet: " + eventsarray[k].value);
                       }
                     }
                   }
                 }
               }
             })
-            .style("fill", "red")
-            .call(wrap,150);
+            .style("fill", "#E45E2D")
+            .call(wrap,300);
 
       var eventdet = svg.append("g") // Event container
-          .attr("transform", "translate(" + 630 + "," + 280 + ")")
+          .attr("transform", "translate(" + 30 + "," + 500 + ")")
           .attr("class", "eventdet")
 
       var eventdet2 = svg.selectAll(".eventdet")
@@ -808,7 +809,8 @@ d3.tsv("data1_log.tsv", function(error, data) {
 
       eventdet2.append("text") 
             .attr("class", "eventdettext")
-            .attr("transform", "translate(0," + 140 + ")")
+            .attr("transform", "translate(0,0)")
+	        .attr("fill","#E45E2D")
             .text(function(d) { 
               for (var j = 0; j < events.length; j++){
                 if (typeof  events[j] != "undefined") {
@@ -827,10 +829,10 @@ d3.tsv("data1_log.tsv", function(error, data) {
                 }
               }
             })
-           .call(wrap, 150);
+           .call(wrap, 450);
 
       var tweetid = svg.append("g") // Event container
-          .attr("transform", "translate(" + 630 + "," + 200 + ")")
+          .attr("transform", "translate(" + 30 + "," + 500 + ")")
           .attr("class", "tweetid")
 
       var tweetid2 = svg.selectAll(".tweetid")
@@ -850,7 +852,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
                       // console.log(eventsarray[k]);
                       if (typeof  eventsarray[k] != "undefined") {
 						special_mouseover(eventsarray[k].value);
-                        return ("Tweet ID: " + eventsarray[k].value);
+                        //return ("Tweet ID: " + eventsarray[k].value);
 						
                       }
                     }
@@ -963,7 +965,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
           return {
             name: name, // "name": the csv headers except date
             values: data4.map(function(d) { // "values": which has an array of the dates and tweets
-              console.log(datecompare);
+              //console.log(datecompare);
               if (datecompare == format2(d.date))
               {
                 return {
@@ -986,9 +988,9 @@ d3.tsv("data1_log.tsv", function(error, data) {
 
       showtitle.append("text") 
         .attr("class", "showtitletext")
-        .attr("x", (width/2)-250) 
-        .attr("y", -12)
-        .style("font-size", "1.3em")
+        .attr("x", 40) 
+        .attr("y", -15)
+        .style("font-size", "15px")
         .style("font-weight", "bold")
         .text(function(d,i) { 
             for (var j = 0; j < titles.length; j++){
@@ -1027,7 +1029,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
         .attr("x", width + 170) 
         .attr("y", 30);
 
-      showlegend_log.select("text").text("Log(#)");
+      //showlegend_log.select("text").text("Log(#)");
 
       var showlegend_raw = issue.select("g") 
         .data(format3(graph_x))
@@ -1039,7 +1041,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
         .attr("x", width + 230) 
         .attr("y", 30);
 
-      showlegend_raw.select("text").text("#");
+      //showlegend_raw.select("text").text("#");
 
       // end of legend title
     
@@ -1074,11 +1076,11 @@ d3.tsv("data1_log.tsv", function(error, data) {
       //d is now the data row for the date closest to the mouse position
 
 
-      focus.select("text").text(function(columnName){
+      /*focus.select("text").text(function(columnName){
          //because you didn't explictly set any data on the <text>
          //elements, each one inherits the data from the focus <g>
          return (d[columnName].slice(0,4));
-      });
+      });*/
 
       focus_1.select("text").text(function(columnName_1){
           //console.log(d);
@@ -1239,30 +1241,48 @@ svg.parallel {
 .foreground .phase6{
  stroke: #151E5E;
 }
+.p1{
+ fill: #BEE0CC;
+}
+.p2{
+ fill: #70C3D0;
+}
+.p3{
+ fill: #419DC5;
+}
+.p4{
+ fill: #316BA7;
+}
+.p5{
+ fill: #223B89;
+}
+.p6{
+ fill: #151E5E;
+}
 </style>
 <script>
 var margin_parallel = {top: 30, right: 100, bottom: 20, left: 150},
-    width = 700 - margin_parallel.left - margin_parallel.right,
-    height = 500 - margin_parallel.top - margin_parallel.bottom;
+    width_parallel = 600 - margin_parallel.left - margin_parallel.right,
+    height_parallel = 540 - margin_parallel.top - margin_parallel.bottom;
 
 var dimensions = [
   {
-    name: "month",
+    name: "Date",
     scale: d3.scale.ordinal().rangePoints([0,height]),
     type: String
   },
   {
-    name: "log_retweet_count",
+    name: "log(Retweets)",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "log_favorite_count",
+    name: "log(Favorites)",
     scale: d3.scale.linear().range([height, 0]),
     type: Number
   },
   {
-    name: "message_type",
+    name: "Message Type",
     scale: d3.scale.ordinal().rangePoints([0, height]),
     type: String
   }
@@ -1270,7 +1290,7 @@ var dimensions = [
 
 var x = d3.scale.ordinal()
     .domain(dimensions.map(function(d) { return d.name; }))
-    .rangePoints([0, width]);
+    .rangePoints([0, width_parallel]);
 
 var line_parallel = d3.svg.line()
     .defined(function(d) { return !isNaN(d[1]); });
@@ -1279,9 +1299,9 @@ var yAxis = d3.svg.axis().orient("left");
 var month_axis=d3.svg.axis().orient("left");
 var yAxis_right = d3.svg.axis().orient("right");
 
-var svg_parallel = d3.select(".story_viz").append("svg").attr("class","parallel").attr("style","float:left; margin-left:-160px;margin-top:50px;")
-    .attr("width", width + margin_parallel.left + margin_parallel.right)
-    .attr("height", height + margin_parallel.top + margin_parallel.bottom)
+var svg_parallel = d3.select(".story_viz").append("svg").attr("class","parallel").attr("style","float:left; margin-left:-380px; margin-top:-50px;")
+    .attr("width", width_parallel + margin_parallel.left + margin_parallel.right)
+    .attr("height", height_parallel + margin_parallel.top + margin_parallel.bottom)
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 	
@@ -1294,13 +1314,19 @@ var dimension = svg_parallel.selectAll(".dimension")
     .attr("transform", function(d) { return "translate(" + x(d.name) + ")"; });
 var dateScale;
 var monthScale;
+
+var theme_section=svg_parallel.append("g").attr("class","themes").attr("transform","translate(0,420)");
+var theme_title=
+	theme_section.append("g").attr("class","title").append("text").attr("style","font-size:12px");
+var theme_desc=	svg_parallel.append("g").attr("class","desc").attr("transform","translate(0,440)").append("text").attr("style","font-size:12px");
+
 d3.json("tweets.json", function(error, data) {
   if (error) throw error;
   data.reverse();
 	
   dimensions.forEach(function(dimension) {
 	  
-	  if(dimension.name === "month"){
+	  if(dimension.name === "Date"){
 		monthScale=dimension.scale.domain(data.map(function(d) { return d[dimension.name]; }));
 	  }else if (dimension.type === Number){
 		  dimension.scale.domain(d3.extent(data, function(d) { return +d[dimension.name]; }));
@@ -1327,8 +1353,8 @@ d3.json("tweets.json", function(error, data) {
       .attr("class", "axis")
       .each(function(d) { 
 	    d3.select(this).call(yAxis.scale(d.scale)); 
-	    if(d.name==="message_type"){  d3.select(this).call(yAxis_right.scale(d.scale)); } 
-		else if(d.name==="month"){  d3.select(this).call(month_axis.scale(d.scale).tickValues(d.scale.domain().filter(function(d,i){ return !(i%12); }))); }								   
+	    if(d.name==="Message Type"){  d3.select(this).call(yAxis_right.scale(d.scale)); } 
+		else if(d.name==="Date"){  d3.select(this).call(month_axis.scale(d.scale).tickValues(d.scale.domain().filter(function(d,i){ return !(i%12); }))); }								   
   	  })
       .append("text")
       .attr("class", "title")
@@ -1352,24 +1378,43 @@ d3.json("tweets.json", function(error, data) {
 	projection.classed("highlight", function(p) { return p == d; });
     projection.filter(function(p) { return p.phase === d.phase; }).each(moveToFront);
 	projection.filter(function(p) { return p === d; }).each(moveToFront);
+	  
+	d3.json("phases.json", function(error, data) {
+	theme_title.text("Top themes across Phase "+highlight_phase+" (Frequency)");
+	var text="";
+	theme_desc.selectAll("tspan").remove();
+	for(i=0; i<data["Phase"+highlight_phase].length; i++){
+		theme_desc.append("tspan").attr("x","0").attr("y",i*15).attr("class","p"+highlight_phase).text(data["Phase"+highlight_phase][i]);
+	}
+});
   }
 
   function mouseout(d) {
     svg_parallel.classed("active", false);
     projection.classed("inactive", false);
 	projection.classed("highlight", false);
+	overall();
   }
 
   function moveToFront() {
     this.parentNode.appendChild(this);
   }
 });
+	
+function overall(){
+d3.json("phases.json", function(error, data) {
+	theme_title.text("Top themes across Phases (Frequency)");
+	theme_desc.selectAll("tspan").remove();
+	var text="";
+	for(i=0; i<data["Overall"].length; i++){
+		theme_desc.append("tspan").attr("font-weight","bold").attr("x","0").attr("y",i*15).text(data["Overall"][i]);
+	}
+});
+}
+overall();
 
 function draw(d) {
   return line_parallel(dimensions.map(function(dimension) {
-	if(dimension.name ==="Date"){
-	return [x(dimension.name), dateScale(d[dimension.name])];
-	}else
     return [x(dimension.name), dimension.scale(d[dimension.name])];
   }));
 }
@@ -1386,6 +1431,15 @@ var special_mouseover= function(id) {
 	projection.classed("highlight", function(p) { return p.Tweet_ID == id; });
     projection.filter(function(p) { return p.phase === highlight_phase; }).each(moveToFront);
 	projection.filter(function(p) { return p.Tweet_ID == id; }).each(moveToFront);
+	
+	d3.json("phases.json", function(error, data) {
+	theme_title.text("Top themes across Phase "+highlight_phase+" (Frequency)");
+	var text="";
+	theme_desc.selectAll("tspan").remove();
+	for(i=0; i<data["Phase"+highlight_phase].length; i++){
+		theme_desc.append("tspan").attr("x","0").attr("y",i*15).attr("class","p"+highlight_phase).text(data["Phase"+highlight_phase][i]);
+	}
+});
   }
 function moveToFront() {
     this.parentNode.appendChild(this);
