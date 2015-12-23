@@ -1378,7 +1378,7 @@ d3.json("tweets.json", function(error, data) {
 	projection.classed("highlight", function(p) { return p == d; });
     projection.filter(function(p) { return p.phase === d.phase; }).each(moveToFront);
 	projection.filter(function(p) { return p === d; }).each(moveToFront);
-	  
+	if(highlight_phase){
 	d3.json("phases.json", function(error, data) {
 	theme_title.text("Top themes across Phase "+highlight_phase+" (Frequency)");
 	var text="";
@@ -1387,6 +1387,7 @@ d3.json("tweets.json", function(error, data) {
 		theme_desc.append("tspan").attr("x","0").attr("y",i*15).attr("class","p"+highlight_phase).text(data["Phase"+highlight_phase][i]);
 	}
 });
+  }
   }
 
   function mouseout(d) {
