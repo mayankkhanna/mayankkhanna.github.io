@@ -125,7 +125,7 @@ h2{
 }
 
 #intro{
-	background:url(images/modi_intro.png) 50% 0 no-repeat fixed;
+	background:url(images/modi_intro.png) right no-repeat fixed;
 	color: black;
 	height: 700px;
 	margin: 0 auto;
@@ -142,9 +142,8 @@ h2{
 }
 
 #third{
-    background: url(images/third_slide.png) 50% 0 no-repeat fixed;
 	color: black;
-	height: 1000px;
+	height: 800px;
 	margin: 0 auto;
 	padding: 0px;	
 }
@@ -179,7 +178,7 @@ h2{
 }
 
 .story_third .float-left{
-	margin: 400px 35px;
+	margin: 40px 150px;
 	min-width: 980px;
 	overflow: auto;
 	width: 980px;

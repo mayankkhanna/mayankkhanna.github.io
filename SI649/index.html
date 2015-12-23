@@ -94,7 +94,7 @@ svg {
         <div class="second_story">
               <h1 id="second_h1">Modi's Twitter Expertise</h1>
               <p id="second_p">Narendra Modi's interest in technology and his role as Prime Minister during one of the greatest eras of technological advancement explains his innovative approach as a leader. Modi strongly believes in the power of technology for impact and highly advocates for the use of social media, specifically Twitter. Our visualization analyzes the Prime Minister's Twitter activity since his adoption of the platform in 2009.</p>
-              <iframe width="720" height="315" src="https://www.youtube.com/embed/AMBufMvMXR4" frameborder="0" allowfullscreen></iframe>
+              <iframe width="720" height="425" src="https://www.youtube.com/embed/AMBufMvMXR4" frameborder="0" allowfullscreen></iframe>
           </div>
       </div> <!--.story-->
       
@@ -104,7 +104,8 @@ svg {
     <div class="story_third">
         <div class="float-left">
             <h1>The Phases of Modi's Political Career</h1>
-              <p>Have a table that talks about this various phases and includes the time frames and definitions of each phase. To clearly understand the time-based breakdown of Modi's career, we divided his time on Twitter into six political phases. Each of the phases are of various lengths and highlight different and significant positions that Modi has held in office.   </p>
+              <p style="width:700px;">Have a table that talks about this various phases and includes the time frames and definitions of each phase. To clearly understand the time-based breakdown of Modi's career, we divided his time on Twitter into six political phases. Each of the phases are of various lengths and highlight different and significant positions that Modi has held in office.   </p>
+			<img src="images/static_timeline.png" style=" width: 700px; margin-left: 140px; margin-top: 40px;" />
           </div>
       </div> <!--.story-->
   </div> <!--#third-->
@@ -217,11 +218,11 @@ var yScale = d3.scale.linear()
     .range([height, 0]);
 
 // 40 Custom DDV colors 
-var color = d3.scale.ordinal().range(["#72C39B", "#E38457", "#E3CF6D", "#80CEAA", "#80CCB3", "#7FC9BD", "#7FC7C6", "#7EC4CF", "#7FBBCF", "#7FB1CF", "#80A8CE", "#809ECE", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#EAD67C", "#F2DE8A","#48A36D",  "#56AE7C",  "#64B98C"]);  
+var color = d3.scale.ordinal().range(["#151E5E", "#FBDB68", "#E3CF6D", "#80CEAA", "#80CCB3", "#7FC9BD", "#7FC7C6", "#7EC4CF", "#7FBBCF", "#7FB1CF", "#80A8CE", "#809ECE", "#8897CE", "#8F90CD", "#9788CD", "#9E81CC", "#AA81C5", "#B681BE", "#C280B7", "#CE80B0", "#D3779F", "#D76D8F", "#DC647E", "#E05A6D", "#E16167", "#E26962", "#E2705C", "#E37756", "#E39158", "#E29D58", "#E2AA59", "#E0B15B", "#DFB95C", "#DDC05E", "#DBC75F", "#EAD67C", "#F2DE8A","#48A36D",  "#56AE7C",  "#64B98C"]);  
 
-var color2 = d3.scale.ordinal().range(["#72C39B", "#E38457", "#E3CF6D"]);  
-var color3 = d3.scale.ordinal().range(["#72C39B", "#E38457", "#E3CF6D"]);  
-var color4 = d3.scale.ordinal().range(["#72C39B", "#E38457", "#E3CF6D"]);
+var color2 = d3.scale.ordinal().range(["#151E5E", "#FBDB68", "#E3CF6D"]);  
+var color3 = d3.scale.ordinal().range(["#151E5E", "#FBDB68", "#E3CF6D"]);  
+var color4 = d3.scale.ordinal().range(["#151E5E", "#FBDB68", "#E3CF6D"]);
 
 var xAxis = d3.svg.axis()
     .scale(xScale)
@@ -247,7 +248,7 @@ var line = d3.svg.line()
 
 var maxY; // Defined later to update yAxis
 
-var svg = d3.select(".story_viz").append("svg").attr("class","timeline").attr("style","float:left")
+var svg = d3.select(".story_viz").append("svg").attr("class","timeline").attr("style","float:left; margin-left:50px; margin-top:50px;")
     .attr("width", width + margin.left + margin.right+100)
     .attr("height", height + margin.top + margin.bottom+2000); //height + margin.top + margin.bottom
 
@@ -410,7 +411,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
         if (d.visible)
         {
           if (d.impevent =="Y") 
-            {return "red";} 
+            {return "#E45E2D";} 
           // else { return color(d.category);}
           else { return "none";}
         }
@@ -423,7 +424,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
         if (d.visible)
         {
           if (d.impevent =="Y") 
-            {return "red";} 
+            {return "#E45E2D";} 
           // else { return color(d.category);}
           else { return "none";}
         }
@@ -1278,7 +1279,7 @@ var yAxis = d3.svg.axis().orient("left");
 var month_axis=d3.svg.axis().orient("left");
 var yAxis_right = d3.svg.axis().orient("right");
 
-var svg_parallel = d3.select(".story_viz").append("svg").attr("class","parallel").attr("style","float:left; margin-left:-160px;")
+var svg_parallel = d3.select(".story_viz").append("svg").attr("class","parallel").attr("style","float:left; margin-left:-160px;margin-top:50px;")
     .attr("width", width + margin_parallel.left + margin_parallel.right)
     .attr("height", height + margin_parallel.top + margin_parallel.bottom)
   .append("g")
