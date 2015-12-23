@@ -104,7 +104,7 @@ svg {
     <div class="story_third">
         <div class="float-left">
             <h1>The Phases of Modi's Political Career</h1>
-              <p style="width:700px;">Have a table that talks about this various phases and includes the time frames and definitions of each phase. To clearly understand the time-based breakdown of Modi's career, we divided his time on Twitter into six political phases. Each of the phases are of various lengths and highlight different and significant positions that Modi has held in office.   </p>
+              <p style="width:700px;">To clearly understand the time-based breakdown of Modi's career, we divided his time on Twitter into six political phases. Each of the phases are of various lengths and highlight different and significant positions that Modi has held in office.   </p>
 			<img src="images/static_timeline.png" style=" width: 700px; margin-left: 140px; margin-top: 40px;" />
 			<p style="float:left; margin-left:95px;margin-top:20px; width:700px; font-size:14px;">This yearly timeline depicts each phase of Modi's early political career before his first tweet (encoded by yellow/orange palette) and Modi's political career after his first tweet (encoded by the blue palette). There are six phases total, which are strategically split up to show how his political career and campaigning evolves. Additionally, a scatter plot showing the number of tweets/day from February 2009 to October 2015 is shown in orange.
 			</p>
@@ -114,6 +114,9 @@ svg {
   
   <div id="fifth">
     <h1>Virality, Message Type, and Themes of Tweets from 2009-2015</h1>
+	<p class="explainer">In order to observe the virality and the tweet content of Modi's tweets, a line graph (left) and a parallel coordinates graph (right) are used. On the line graph, you can view the number of favorites and retweets by day. You may brush over the x-axis to zoom into a particular timeframe. You may also explore the parallel coordinates graph by hovering over each line, which is representative of a tweet.</p>
+
+<p class="explainer">Significant events are shown in orange circles on the line graph. Once you click on the “event point,” the parallel coordinates graph will automatically show the themes and categories related to the most significant tweet during that day.</p>
     <div class="story_viz">
     <!-- where the visualizations go -->   
     </div> <!--.story-->
@@ -251,7 +254,7 @@ var line = d3.svg.line()
 
 var maxY; // Defined later to update yAxis
 
-var svg = d3.select(".story_viz").append("svg").attr("class","timeline").attr("style","float:left; margin-left:50px; margin-top:-50px;")
+var svg = d3.select(".story_viz").append("svg").attr("class","timeline").attr("style","float:left; margin-left:50px; margin-top:-30px;")
     .attr("width", width + margin.left + margin.right+100)
     .attr("height", 800); //height + margin.top + margin.bottom
 
@@ -668,7 +671,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
           return {
             name: name, // "name": the csv headers except date
             values: data2.map(function(d) { // "values": which has an array of the dates and tweets
-              console.log(datecompare);
+              //console.log(datecompare);
               if (datecompare == format(d.date))
               {
                 return {
@@ -1003,7 +1006,7 @@ d3.tsv("data1_log.tsv", function(error, data) {
                   //console.log(titlesarray);
                   for (var k = 0; k < titlesarray.length; k++){
                     if (typeof  titlesarray[k] != "undefined") {
-                      // console.log(titlesarray[k].title);
+                      console.log(titlesarray[k].title);
                       return (titlesarray[k].title)
                     }
                   }
@@ -1301,7 +1304,7 @@ var yAxis = d3.svg.axis().orient("left");
 var month_axis=d3.svg.axis().orient("left");
 var yAxis_right = d3.svg.axis().orient("right");
 
-var svg_parallel = d3.select(".story_viz").append("svg").attr("class","parallel").attr("style","float:left; margin-left:-380px; margin-top:-50px;")
+var svg_parallel = d3.select(".story_viz").append("svg").attr("class","parallel").attr("style","float:left; margin-left:-380px; margin-top:-30px;")
     .attr("width", width_parallel + margin_parallel.left + margin_parallel.right)
     .attr("height", height_parallel + margin_parallel.top + margin_parallel.bottom)
   .append("g")

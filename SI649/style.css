@@ -160,6 +160,14 @@ h2{
 	padding-top:30px;
 }
 
+#fifth .explainer {
+	color: black;
+	font-family: "Proxima Nova Light", 'Helvetica Neue', Arial, Helvetica, sans-serif;;
+	margin-left:50px;
+	font-size:14px;
+	width:700px;
+}
+
 .story_intro{
 	margin: 0 0;
 	min-width: 980px;
