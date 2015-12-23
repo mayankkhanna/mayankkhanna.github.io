@@ -1380,7 +1380,7 @@ d3.json("tweets.json", function(error, data) {
 	projection.filter(function(p) { return p === d; }).each(moveToFront);
 	if(highlight_phase){
 	d3.json("phases.json", function(error, data) {
-	theme_title.text("Top themes across Phase "+highlight_phase+" (Frequency)");
+	theme_title.text("Top themes across Phase "+highlight_phase+" (Tweet Frequency)");
 	var text="";
 	theme_desc.selectAll("tspan").remove();
 	for(i=0; i<data["Phase"+highlight_phase].length; i++){
@@ -1404,7 +1404,7 @@ d3.json("tweets.json", function(error, data) {
 	
 function overall(){
 d3.json("phases.json", function(error, data) {
-	theme_title.text("Top themes across Phases (Frequency)");
+	theme_title.text("Top themes across Phases (Tweet Frequency)");
 	theme_desc.selectAll("tspan").remove();
 	var text="";
 	for(i=0; i<data["Overall"].length; i++){
@@ -1434,7 +1434,7 @@ var special_mouseover= function(id) {
 	projection.filter(function(p) { return p.Tweet_ID == id; }).each(moveToFront);
 	
 	d3.json("phases.json", function(error, data) {
-	theme_title.text("Top themes across Phase "+highlight_phase+" (Frequency)");
+	theme_title.text("Top themes across Phase "+highlight_phase+" (Tweet Frequency)");
 	var text="";
 	theme_desc.selectAll("tspan").remove();
 	for(i=0; i<data["Phase"+highlight_phase].length; i++){
