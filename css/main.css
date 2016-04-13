@@ -775,6 +775,9 @@ max-width: 300px;
 -webkit-margin-before: 0px;
 -webkit-margin-after: 0px;
 }
+.highlightButton{
+	display:block; background-color:#0A5DA6; border-radius:5px; padding: 10px 15px 10px 15px; color:white; text-decoration:none; font-weight:bold; float:left;
+}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes effect
