@@ -670,7 +670,21 @@ padding-top: 10px;
 padding-bottom: 10px;
 margin-bottom:30px;
 }
-.fourSection .icon{
+.fourSection .icon, .fourSection .fa{
+    font-size:40px;
+}
+
+.threeSection {
+font-size: 20px;
+text-align: center;
+display: block;
+float: left;
+width: 33%;
+padding-top: 10px;
+padding-bottom: 10px;
+margin-bottom:30px;
+}
+.threeSection .icon, .threeSection .fa{
     font-size:40px;
 }
 
