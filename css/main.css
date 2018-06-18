@@ -233,9 +233,9 @@ body
 
 .specialIcon-right{
     float: right;
-    margin-right: 120px;
+    margin-right: 30%;
     position: inherit;
-    margin-top: -100px;
+    margin-top: -110px;
 }
 
 h3.nameHeading{
