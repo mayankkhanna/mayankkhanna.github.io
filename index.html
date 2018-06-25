@@ -8,7 +8,7 @@
 <title>Mayank Khanna | Work</title>
 </head>
 <body>
-<section class="sidePane work_student">
+<section class="sidePane">
 <h3 class='nameHeading'><a href='/'><span class="highlight">Mayank</span> Khanna</a></h3>
 <a class='navigationlink' href='/about/'>About</a>
 <a class='navigationlink' href='/'>Work</a>
@@ -20,14 +20,21 @@
 </div>
 </section>
 <section class="mainPane">
-<div class='workHeading'>Work As
+<!--<div class='workHeading'>Work
 <span class='role highlightedRole' id='student'>Student</span>
 <span class='role' id='freelancer'>Freelancer</span>
-<!--<span class='role' id='employee'>Employee</span>-->
+<span class='role' id='employee'>Employee</span>
 <div class='after'></div>
-</div>
+</div>-->
 <div class='workDescription display' id='studentWork'>
-  <a href='/work/pilotly/'>
+  <a href='/work/kodak/'>
+  <div class='work newwork one' style="background-color: black;">
+      <h4>Reliving digital memories in the Snapchat era</h4>
+      <p style="width:300px;">Designing several features for the current Kodak Moments app</p>
+      <span class="workTags">Interaction Design / Concept Testing /</span>
+  </div>
+  </a>
+  <a href='/work/pilotly/' style="display:block; margin-top:35px;">
   <div class='work newwork one' style="background-image:url('/Images/pilotly.png')">
       <h4>Better television through social engagement</h4>
       <p style="width:350px;">Building an online community that engages around television pilots</p>
@@ -162,7 +169,7 @@ States over the map</p>
 $(".workHeading .after").width(($(".highlightedRole").offset().left+ $(".highlightedRole").width())-$(".highlightedRole").parent().offset().left);
   
     
-window.onhashchange= function(){ changeHash(); }
+//window.onhashchange= function(){ changeHash(); }
     
 function changeHash(){    
         if(location.hash){
