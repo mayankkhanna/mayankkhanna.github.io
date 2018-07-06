@@ -808,6 +808,10 @@ max-width: 300px;
 .featuredIn{
     color:#7A7A7A;
 }
+.listStyle{
+    margin-left:100px;
+    width:700px;
+}
 
 /* Chrome, Safari, Opera */
 @-webkit-keyframes effect
