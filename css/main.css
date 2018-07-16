@@ -3,7 +3,7 @@ body
     margin:0px;
     background-color:#f8f8f8;
     -webkit-font-smoothing:antialiased;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans',"Arial", sans-serif;
 }
 
 .sidePane
