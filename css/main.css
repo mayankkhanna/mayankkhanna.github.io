@@ -395,6 +395,23 @@ a.link:hover, .projectLink:hover{
     min-height: 400px;
 }
 
+.projectCovers{
+    min-width:700px;
+    max-width:100%;
+    text-align:justify;
+    margin:50px;
+    margin-left:100px;
+    margin-right:200px;
+    font-size:16px;
+    line-height:25px;
+    min-height: 400px;
+}
+.coverLogo{
+    float: right;
+    margin-right: 20px;
+    margin-top: 120px;
+}
+
 .workDescription{
     display:none;
 }
@@ -437,13 +454,14 @@ a.link:hover, .projectLink:hover{
 }
 
 .newwork{
-    height: 201px;
+    height: 260px;
     background-size: 100%;
     padding:0px;
     transition: box-shadow .5s ease;
     background-repeat: no-repeat;
+    background-size: cover;
     min-width:700px;
-    border-radius: 5px;
+    border-radius: 10px;
 }
 
 .work>p{
@@ -532,7 +550,7 @@ a.link:hover, .projectLink:hover{
 }
 
 .workTags{
-margin-top: 30px;
+margin-top: 80px;
 float: left;
 margin-left: 25px;
 font-size: 13px;
