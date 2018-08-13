@@ -222,7 +222,7 @@
       display: block;
       text-indent: -9999px; }
       .sy-controls li a:link, .sy-controls li a:visited {
-        opacity: 1; }
+        opacity: 0.5; }
       .sy-controls li a:hover, .sy-controls li a:focus {
         opacity: 1;
         outline: none; }
