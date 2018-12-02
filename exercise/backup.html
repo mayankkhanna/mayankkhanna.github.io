@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="/css/font-lineicons.css" type="text/css"/>
+<link rel="stylesheet" href="/css/main.css" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400|Raleway:400,600' rel='stylesheet' type='text/css'>
+<title>Wait Staff Reviews</title>
+ <!-- do not cache this page -->
+    <meta http-equiv="cache-control" content="max-age=0"/>
+    <meta http-equiv="cache-control" content="no-cache"/>
+    <meta http-equiv="expires" content="0"/>
+    <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
+    <meta http-equiv="pragma" content="no-cache"/>
+</head>
+<body style="background-color: white;">
+<section class="sidePaneProjectDetail">
+<h3 class='nameHeading' style="width:800px;"><span class="highlight">Mayank</span> Khanna's Design Exercise</h3>
+</section>
+<section class="mainPaneProjectDetail">
+<div class='heading'>Wait Staff Reviews</div>
+<div class='workDescription display' id='employeeWork'>
+<p class="subheading blue" style="font-size:28px;">Problem Statement</p>
+<div style="width:40%; display:block; float:left;">
+<p class="subheadingDescription" style="font-size:18px;">While there are many ways to rate and review restaurants, these are not focused on evaluating individuals servers. 
+</p>
+<p class="subheadingDescription" style="font-size:18px;">
+    Design an experience where diners can submit positive comments and constructive suggestions for the wait staff, and servers can use this feedback to both improve and help to secure new employment. 
+</p>
+<p class="subheadingDescription" style="font-size:18px;">   
+    Provide a high-level flow and supporting wireframes.
+</p>
+</div>
+<div class="focusContainer" style="width:50%;display:block;float:right;">
+<img src="/Images/exercise/diner_server.jpg" style="border-radius:5px; box-shadow:0px 0px 10px silver; width:550px; float:right; margin-top:-50px; margin-bottom:50px;"/>
+</div>
+<div class="specialDiv">
+    <hr/>
+<p class="subheading blue" style="margin-top:50px;">Analyzing the problem statement</p>
+<div class="subheadingDescription" >
+    After reading the problem statement, the sections in the statement that caught my eye were:
+<ul style="margin-left:-50px;">
+<li class="listStyle" style="margin-top:10px;"><b>Design an experience</b></li>
+<li class="listStyle" ><b>"diners can submit positive comments and constructive suggestions"</b></li>
+<li class="listStyle" ><b>"servers can use this feedback to… improve and…secure new employment"</b></li>
+</ul></div>
+<p class="subheadingDescription" style="margin-top:20px">
+   Based on the problem statement, I also identified three types of users involved in the entire experience. They are as follows:
+   <img class="intense" src="/Images/exercise/user_types.jpg" style="width:800px; margin-left:auto; margin-right:auto; display:block;"/>
+</p>
+<p class="subheading blue">The socio-technical system</p>
+    <p class="subheadingDescription">To get a better understanding of the informational needs of the three different users, I decided to map out the end-to-end flow of how information would travel across these users.</p>
+    <p class="subheadingDescription">The highlighted elements in the flow indicate areas where information is received or shared over a digital interface.</p>
+<img class="intense focus" src="/Images/exercise/social_system.jpg" />
+<p class="subheading blue" >Background Research</p> 
+<p class="subheadingDescription">
+    To get a better understanding of the hiring practices in the restaurant business, I decided to interview a restaurant manager at a fine-dine restaurant in Reston, Virginia but was unable to do so due to the restaurant's communication policies.
+</p>
+    <p class="subheadingDescription">
+    Instead of trying to recruit restaurant managers from other restaurants, I decided to look through the wait-staff job postings on Craigslist. After looking through several job postings, I was able to find two advertisements with detailed requirements about the wait-staff job profile.
+    </p>
+    <img class="intense focus" src="/Images/exercise/jobpostings.jpg" />
+    <p class="subheadingDescription">
+    The keywords from these job profiles assisted me in framing some of my questions for the user-interviews later.
+    </p>
+     <img class="intense focus" src="/Images/exercise/keywords.jpg" />
+    <p class="subheading blue">Scoping the problem</p>
+    <p class="subheadingDescription">For meeting the goals of this exercise, I decided to focus on <span class="highlight">Problem A</span> within the two-sided system.</p>
+    <div class="subheadingDescription">
+     Hence, the key users in the scoped out problem are:
+    <ul>
+    <li class="highlight">Restaurant Diner</li>
+     <li class="highlight"> Restaurant Server</li>
+        </ul></div>
+    <img class="intense focus" src="/Images/exercise/problem_scope.jpg" style="width:100%; margin-left:auto; margin-right:auto; display:block;"/>
+    <p class="subheading blue">Transference of Feedback:</p>
+    <p class="subheadingDescription">
+        In order to facilitate the transference of information between the restaurant diner and the server, I brainstormed different ways that could enable that.</p>
+    <p class="subheadingDescription">
+        I tried to think about it from the perspective of both, the restaurant diner and server and also thought about the restaurant's involvement in this information transfer. The ideas are illustrated as follows: </p>
+    <img class="intense focus" src="/Images/exercise/data_transferrance.jpg" />
+     <p class="subheadingDescription"><b>
+       Out of all the ideas, the one idea that clearly resonated with me was the one where the server directly asks the diner for feedback.</b></p>
+    <div class="subheadingDescription">
+        The idea of the server directly requesting the feedback from the diner resonated with me for the following reasons:
+    <ul>
+        <li class="impSection highlight">The server can be empowered to independently solicit feedback from his/her customers. They can solicit feedback irrespective of whether other wait staff members are doing the same.</li>
+        <li class="impSection highlight">There is no third-party ( physical entity or process ) involved between the passage of this information.</li>
+        <li class="impSection highlight">A server directly receives this feedback and can take action on it. Since, the restaurant is not involved in the socio-technical transaction, the outcomes of the feedback will solely help them improve and will possibly not affect any other aspects of their job (eg. reduction in pay, job security).</li>
+    </ul></div>
+    <p class="subheading blue">Understanding the user</p>
+    <div class="subheadingDescription">
+        <p class="subTitle">- Wait staff / Servers</p>
+        In order to get a better understanding of how restaurant wait staff employees get feedback and how they look for hospitality industry jobs, I had casual conversations with two restaurant wait staffers.</div>
+    <div class="subheadingDescription">Key insights from those conversations:
+    <ul>
+        <li class="impSection highlight">Their primary method for job search was to participate in walk-ins.</li>
+        <li class="impSection highlight">Information about these walk-ins was received through online searching.</li>
+        <li class="impSection highlight">Current method to receive feedback for staffers was only through methods/systems set in place by restaurants. Also, this feedback was mostly indirect in nature.</li>
+        </ul></div>
+    <p class="warning">While I did get insights from these conversations, it was tricky to interview the two wait staffers as I was also their customer during these conversations.</p>
+    <div class="subheadingDescription">
+        <p class="subTitle">- Restaurant Diners</p>
+        To understand the expectations of customers from such an experience/system, I interviewed three of my neighbors who are passionate about food and acknowledge good meal experiences at restaurants.</div>
+    <div class="subheadingDescription">Key insights from those interviews:
+    <ul>
+        <li class="impSection highlight">All the interviewees believed that a good wait staff experience contributes to their dining experience and also contributes to their perception of the restaurant.</li>
+        <li class="impSection highlight">Two interviewees were able to point out the specifics of how their last dine-in experience could have been improved by the server assisting them. On the other hand, one interviewee was able to applaud their last dine-in experience coz of the wait staff.</li>
+        <li class="impSection highlight">Two interviewees indicated that they would be motivated to provide feedback to the server without any incentives while one interviewee indicated that incentives would encourage him/her to do it on a regular basis.</li>
+        <li class="impSection highlight">All interviewees were comfortable with indicating their names as part of the feedback but also expressed the need to remain anonymous when needed.</li>
+        <li class="impSection highlight">All interviewees indicated that they would prefer to provide such feedback on their own device instead of a restaurant/server provided device.</li>
+         </ul></div>
+    <p class="subheadingDescription">As part of these interviews,  I also tested a feedback survey with these interviewees to seek their opinion about specific attributes in the survey.</p>
+    <div style="max-width: none; display: block; margin-bottom: 100px; float: left;">
+    <div style="width: 40%; float: left; padding-top: 150px;margin-left: 100px;">
+    <div class="subheadingDescription positive"><span class="highlight">Defining the feedback attributes:</span>
+        <p class="subheadingDescription">Based on the job postings I saw on the craigslist site, I was able to pull out specific qualities/skills that restaurants look for when hiring a wait staff employee. These qualities/skills were framed into attributes that the dining guests can rate a server on.</p>
+        <p class="subheadingDescription">I compiled a quick survey with these attributes and corresponding scale values to test with users during the interviews. </p>
+        <p class="highlight">* Click on start to view the survey</p>
+    </div>
+    </div>
+    <div class="typeform-widget" data-url="https://mayankkhanna.typeform.com/to/KPkj2u" style="width: 40%; height: 700px; float:right; box-shadow:0px 0px 10px silver;"></div> <script> (function() { var qs,js,q,s,d=document, gi=d.getElementById, ce=d.createElement, gt=d.getElementsByTagName, id="typef_orm", b="https://embed.typeform.com/"; if(!gi.call(d,id)) { js=ce.call(d,"script"); js.id=id; js.src=b+"embed.js"; q=gt.call(d,"script")[0]; q.parentNode.insertBefore(js,q) } })() </script>
+    </div>
+    <div class="subheadingDescription"><p class="highlight">Post user feedback:</p>
+    <ul>
+    <li class="impSection">I was able to reduce the number of attributes from 7 to 5, removing the attributes the users could not relate to. (2 out of 3 users indicated that "Quality of service" was an umbrella term for all the other attributes. 2 out of 3 users could not relate to the attribute "Cleanliness" as they would expect a wait staff member to be clean at a sit-down restaurant).</li>
+    <li class="impSection">I also changed the scale values for certain attributes based on the feedback I received from the interviewees and their inability to understand the particular scale value(s).</li>
+    </ul></div>
+    <img class="intense focus" src="/Images/exercise/feedback_attributes.jpg" style="width:100%; margin-left:auto; margin-right:auto; display:block;"/>
+    <p class="subheading blue">Defining the user:</p>
+    <div class="subheadingDescription"><p class="subheadingDescription">To help me define the experience, I decided to outline the key attributes of the users that would contribute to such an experience. </p>
+        <p class="subheadingDescription">This also helped establish their motivations to participate in such an experience.</p>
+    <img class="intense" src="/Images/exercise/profile_patrick.jpg" />
+    <img class="intense" src="/Images/exercise/profile_amina.jpg" />
+    </div>
+    <p class="subheading blue">Mapping the functionality:</p>
+    <p class="subheadingDescription" >
+       As part of formulating the system in more detail, I decided to map out all the individual functionalities needed by the respective user roles to participate in the experience.
+    </p>
+    <img class="intense focus" src="/Images/exercise/Usecases.jpg"/>
+    <p class="subheadingDescription" >This also guided in determining the platform/device that would be better suited for enabling the experience for the two user roles.</p>
+    <img class="intense focus" src="/Images/exercise/usecases_medium.jpg" />
+    <p class="subheading blue">Interaction flows:</p>
+    <p class="subheadingDescription">To ensure that servers can swiftly interact with diners to solicit feedback on the service provided, I decided to pursue a QR-code based experience where the server can present the QR code to the diner and ask the guests to scan the code using their own mobile phones.</p>
+    <p class="subheadingDescription">Using QR-codes to enable the interaction ensured that the diners would not need to search for the specific server on the interface. This would avoid any user errors and the possibility of the diners not providing any feedback.</p>
+    <p class="subheadingDescription">The detailed interaction flows are illustrated as follows:</p>
+    <div class="subheadingDescription">
+        <p class="subTitle">- Interaction Flow between Server and Diner</p></div>
+    <img class="intense focus" src="/Images/exercise/Server_Diner_Flow.png"/>
+       <div class="subheadingDescription">
+        <p class="subTitle">-  Interaction Flow for Server Mobile App</p></div>
+    <p class="warning"><span class="highlight">*If the text in the below flow is tough to read, you can view the detailed flow</span> <a class='boldLink' href="https://overflow.io/s/V6IBES/" target="_blank">here.</a></p>
+    <img class="intense focus" src="/Images/exercise/flow_server.png" />
+        <div class="subheadingDescription">
+        <p class="subTitle">- Interaction Flow for Diner Web Survey</p></div>
+        <img class="intense focus" src="/Images/exercise/flow_user.png" />
+    <p class="subheading blue" style="margin-bottom:50px;">Key Screens explained:</p>
+    <p class="subheadingDescription">Explained below are a few screens that enable the interactions in this experience in a fundamental manner:</p>
+    <div style="max-width: none; display: block; margin-bottom: 50px; float: left;">
+    <div style="width: 40%; float: left; margin-left:100px;">
+         <img src="/Images/exercise/diner_welcome.png" style="width:375px;"/>
+    </div>
+    <div style="width: 40%; float: right; padding-top: 50px;margin-right: 100px;">
+       <div class="subheadingDescription"><span class="highlight" style="color:#4A90E2;">Diner Web Survey - Welcome screen</span>
+        <p class="subheadingDescription">To help build on the conversation the server had with the diner, the survey welcome screen allows the diner to understand the goals of this feedback solicitation.</p>
+        <p class="subheadingDescription">To ensure that the servers only receive feedback for the past day of service, the survey links expire at 3:00 am on the following day. Hence, every day of service by the server has the corresponding day's feedback.</p>
+    </div>
+    </div>
+    </div>
+    <div style="max-width: none; display: block; margin-bottom: 50px; float: left;">
+    <div style="width: 40%; float: left; margin-left:100px;">
+         <img src="/Images/exercise/diner_submit.png" style="width:375px;"/>
+    </div>
+    <div style="width: 40%; float: right; padding-top: 150px;margin-right: 100px;">
+       <div class="subheadingDescription"><span class="highlight" style="color:#4A90E2;">Diner Web Survey - Survey experience</span>
+        <p class="subheadingDescription">To ensure authenticity of the feedback received, diners are requested to provide their email ids before starting the survey.</p>
+        <p class="subheadingDescription">Based on the feedback received during user interviews, there is an option to submit the feedback anonymously. In case of an anonymous feedback, the server would not be able to see the name of the diner who submitted that particular feedback. It would indicate "Anonymous user" in place of the diner's name in the server app.</p>
+        <p class="subheadingDescription">To allow the servers to quickly gauge how well they did in a particular diner service or their entire day of service, I decided to add a rewards option in the survey. From the diner's perspective, the selection of the reward could provide a holistic metric of how they felt about the service received without specifically raiting the experience in a general manner.</p>
+           <p class="subheadingDescription"> In addition to the rewards option, there are key atrributes on which the diner can rate the server on. These are provided to give the server a better understanding of the service attributes where he/she could further improve. It also guides the server about the service attributes that are his/her strength.</p>
+    </div>
+    </div>
+    </div>
+    <div style="max-width: none; display: block; margin-bottom: 50px; float: left;">
+    <div style="width: 40%; float: left; padding-top: 150px;margin-left: 100px;">
+    <div class="subheadingDescription"><span class="highlight" style="color:#86C862;">Server App - Home</span>
+        <p class="subheadingDescription">The server shows the home screen of the server app to present the QR code to the diner.</p>
+        <p class="subheadingDescription">For scenarios where the diner does not have an application to scan the QR code, the short link to the survey is indicated. The diner can manually type the short link on their device browser to go to the web survey. </p>
+    </div>
+    </div>
+    <div style="width: 40%; float: right;">
+        <img src="/Images/exercise/server_home.png" style="width:360px;"/>
+    </div>
+    </div>
+    <div style="max-width: none; display: block; margin-bottom: 50px; float: left;">
+    <div style="width: 40%; float: left; padding-top: 50px;margin-left: 100px;">
+    <div class="subheadingDescription"><span class="highlight" style="color:#86C862;">Server App - Reviews</span>
+        <p class="subheadingDescription">As mentioned in the survey experience, the rewards serve as a quick metric for the server to quickly gauge how they are performing during a service day.</p>
+        <p class="subheadingDescription">The reviews main screen only shows the reviews that are submitted after 3:00 am on a particular day to 3:00 am on the following day.</p>
+        <p class="subheadingDescription">Reviews that are older than a day can be viewed by going to the "All Reviews" screen where the user can filter the reviews by reward type, range of ratings received on specific attributes and a date range.</p>
+        <p class="subheadingDescription">Reviews that are viewed by the server are highlighted in white while the reviews that have not been viewed are in light gray.</p>
+    </div>
+    </div>
+    <div style="width: 40%; float: right;">
+        <img src="/Images/exercise/server_reviews.png" style="width:360px;"/>
+    </div>
+    </div>
+    <div style="max-width: none; display: block; margin-bottom: 50px; float: left;">
+    <div style="width: 40%; float: left; padding-top: 150px;margin-left: 100px;">
+    <div class="subheadingDescription"><span class="highlight" style="color:#86C862;">Server App - Individual Review</span>
+        <p class="subheadingDescription">On clicking on a particular review card on "Today's Reviews" screen or "All Reviews" screen the server can see the detailed review from the diner.</p>
+        <p class="subheadingDescription">The server has the option to highlight the comments from the diner on their job profile. This functionality was added to allow the server to showcase their achievements when a diner appreciated them for the service received. </p>
+    </div>
+    </div>
+    <div style="width: 40%; float: right;">
+        <img src="/Images/exercise/server_review.png" style="width:360px;"/>
+    </div>
+    </div>
+    <div style="max-width: none; display: block; margin-bottom: 50px; float: left;">
+    <div style="width: 40%; float: left; padding-top: 150px;margin-left: 100px;">
+    <div class="subheadingDescription"><span class="highlight" style="color:#86C862;">Server App - Job Profile</span>
+        <p class="subheadingDescription">Aggregate feedback from all the diners is indicated on the server's job profile. Service attribute raitings from the diner surveys are indicated as average raitings for the server's service skills.</p>
+        <p class="subheadingDescription">To achieve the goal of securing new employment, the server can share this job profile as a web link as part of their job application.</p>
+        <p class="subheadingDescription">To enable the user to use this application as means to build their job profile, the app allows the user to add any previous jobs they might have held or add a new position in case of a job switch.</p>
+        <p class="highlight" style="font-style: italic; text-align: left;">*Screen size increased in length for illustrative purposes.</p>
+    </div>
+    </div>
+    <div style="width: 40%; float: right;">
+        <img src="/Images/exercise/server_profile.png" style="width:360px;"/>
+    </div>
+    </div>
+     <p class="subheadingDescription" >
+       The initial versions of the job profile screen did not allow the user to add any previous or new jobs. To ensure a more complete job profile, I iterated on the design to add the functionality.
+    </p>
+    <p class="subheadingDescription" >
+     The initial concept for the job profile did not indicate the total number of feedback surveys that were submitted. In the final concept, I used that number as an opportunity to indicate the number of diners the server has served through the app experience. This number also adds a credibility to the server experience indicating the total number of guests he/she has served through different jobs, a metric that's possibly not well acknowleged in a server's job experience.  
+    </p>
+     <img class="intense focus" src="/Images/exercise/iteration.jpg" />
+        <p class="subheading blue">Design consideration (Server App)</p>
+    <div class="subheadingDescription"><p>Considering the nature of the server's job, there is a possibility that the server does not have the time to pull out their phone(to present the QR code) for each diner they served.</p>
+    <p>To enable the server during such busy schedules, there can be an accompanying smartwatch app, that allows them to quickly present the QR code or link to the diner. They can also get a quick overview of the total reviews or rewards they've received during their work shift by scrolling the screen on the smartwatch. </p>
+    </div>
+    <img class="intense focus" src="/Images/exercise/watch_experience.png" />
+    <p class="subheading blue">Future Enhancements</p>
+    <div class="subheadingDescription" >
+     Based on the experience outlined above, there are few enchancements that could make the experience even richer for the different user roles. They are as follows:
+        <ul><li class="impSection"><span class="highlight">Incentivizing the diner:</span> During user interviews 1 out of 3 users indicated that they would regularly provide feedback to servers if there are associated incentives. A possibility of such an incentive could be a <span class="highlight">small value gift card</span>sent to the diner's email everytime the diner submits 10 different surveys using their email id.</li>
+            <li class="impSection"><span class="highlight">Partnership with Restaurants:</span> Partnering with restaurants could help the experience in two ways. Firstly, with restaurants as partners, the interface could highlight the restaurant branding which could build <span class="highlight">trust</span> between the diners and the platform. Secondly, the incentives for the diner could be driven by <span class="highlight">discounts or freebies from the restaurant</span> itself, which would mean return business for the restaurants.</li>
+        <li class="impSection"><span class="highlight">Service is provided by more than one server:</span> While on most occassions, a diner or diner party is assisted by one main server, there is a possibility that multiple servers could assist a single diner or group. More research on how often this happens and how restaurants assign servers to diners can assist in incorporating such scenarios in the platform.</li>
+        </ul>
+    </div>
+    <div class="subheadingDescription" ><p class="highlight" style="text-align: center">Thank you!</p></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<div class='footer' style="float:left;">Hand-crafted by <a class='boldLink' href="http://twitter.com/mynk_k" target="_blank">@mynk_k</a></div>
+</section>
+</body>
+<script type="text/javascript" src="/js/intense.js"></script>
+<script>
+   window.onload = function() {
+	// Intensify all images with the 'intense' classname.
+    var elements = document.querySelectorAll( '.intense' );
+	Intense( elements );
+}
+    
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49196502-1', 'mayankk.in');
+  ga('send', 'pageview');
+</script>
+</html>
