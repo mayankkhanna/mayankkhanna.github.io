@@ -3,8 +3,10 @@ html {
     --kodak-red: red;
     --white: white;
     --background-gray: #f8f8f8;
+    --background-dgray: #f3f3f3;
     --text-black:#333333;
     --text-gray:#504b4b;
+    --backgroundText-Gray:#dcdcdc;
 }
 
 /* Defaults */
@@ -21,6 +23,10 @@ body
     background-color:var(--background-gray);
     color:var(--text-black);
     counter-reset: ol;
+}
+
+video{
+    margin: 50px 0px;
 }
 
 /* Defaults end */
@@ -71,10 +77,11 @@ h3.nameHeading .highlight{
 
 
 .hero {
-    background-image: url("/Images/baby.jpg"); 
-    background-size: cover; 
+    background-image: url("/Images/assets/kodak_hero.png"); 
+    background-size: auto 600px; 
     background-attachment: fixed;
-    height:500px;
+    height:600px;
+    width:100%;
 }
 
 .content{
@@ -85,11 +92,24 @@ h3.nameHeading .highlight{
     grid-column-gap: 10px;
 }
 
+.fullWidth{
+    margin: 100px auto 100px auto;
+    background-color: var(--background-dgray);
+    height: 300px;
+}
+
 
 /* Styling*/
+.red{
+    color: var(--kodak-red);
+}
+.darkGray{
+    color: var(--backgroundText-Gray);
+}
 a{
     color: #0A5DA6;
     text-decoration: none;
+    font-weight:500;
 }
 
 a:hover{
@@ -121,7 +141,7 @@ p{
 
 p.midContent{
     color:var(--text-gray);
-    font-size: 22px;
+    font-size: 24px;
     text-align: justify;
     line-height: 34px;
 }
@@ -153,9 +173,28 @@ li::before{
     color: var(--white);
 }
 
+.boldText{
+    font-size:96px;
+    font-weight:800;
+}
+
+.backgroundText{
+    font-size: 200px;
+    font-weight:800;
+    z-index:-1;
+}
+
 /* Styling ends */
 
 /* layout */
+.flex-container{
+    display:flex;
+    flex-direction:row;
+}
+.flex-container > p {
+    flex:auto;
+}
+
 .left_1col{
     grid-column-start: 1;
     grid-column-end: 2;
@@ -184,10 +223,12 @@ li::before{
     grid-column-end: 5;
 }
 
-
-.flexContainer{
+.left_4col{
     grid-column-start: 1;
     grid-column-end: 5;
+}
+
+.flexContainer{
     display:flex;
     align-items: flex-start;
 }
