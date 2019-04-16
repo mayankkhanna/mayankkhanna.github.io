@@ -80,8 +80,15 @@ h3.nameHeading .highlight{
     background-image: url("/Images/assets/kodak_hero.png"); 
     background-size: auto 600px; 
     background-attachment: fixed;
+    background-repeat: no-repeat;
     height:600px;
     width:100%;
+}
+
+.kaagazi{
+    background-image: url("/Images/assets/kaagazi_hero.JPG");
+    background-size: cover;
+    background-position: bottom;
 }
 
 .content{
