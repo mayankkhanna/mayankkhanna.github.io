@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="/css/font-lineicons.css" type="text/css"/>
+<link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css" type="text/css"/>
+<link type="text/css" rel="stylesheet" href="www/stylesheets/preview-export-min.css">
+<link rel="stylesheet" href="/css/slippry.css" type="text/css"/>
+<link rel="stylesheet" href="/css/main.css" type="text/css"/>
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:600,400|Raleway:400,600' rel='stylesheet' type='text/css'>
+<title>Mayank Khanna | Work</title>
+</head>
+<body style="background-color: white;">
+<section class="sidePaneProjectDetail">
+    <a href="/work/kodak/"><i class="fa fa-nav fa-chevron-right"></i></a>
+    <a href="/work/Ignite2/"><i class="fa fa-nav fa-chevron-left"></i></a>
+    <a href="/"><i class="fa fa-nav fa-times"></i></a>
+<div class='social-links'>
+    <a class='link' href='http://www.behance.net/MayankKhanna' target="_blank"></a>
+    <a class='link' href='http://twitter.com/mynk_k' target="_blank"></a>
+    <a class='link' href='http://www.facebook.com/mayank.khanna.965' target="_blank"></a></div>
+<h3 class='nameHeading'><a href='/'><span class="highlight">Mayank</span> Khanna</a></h3>
+</section>
+<section class="mainPaneProjectDetail">
+<div class='heading'>Ignite 2.0 Search 🔍</div>
+<div class='workDescription display' id='employeeWork'>
+<p class="subheading blue"><span class="icon icon-documents-bookmarks-01"></span>Project Background</p>
+<div style="width:50%; display:block; float:left;">
+<p class="subheadingDescription" >After completing the role-based access control capability for Ignite 2.0, the next major feature in the product timeline was the search capability for our users.
+   </p>
+    <p class="subheadingDescription" >Considering the wide range of objects in the system and the nested hierarchies between those objects, the search capability was supposed to solve some major navigation related pain-points for our users.
+   </p>
+    <p class="subheadingDescription" >In addition, the search feature also had to be role-based wherein depending on the role of the user, they would be able to see specific object types within the search results.
+   </p>
+<p class="subheadingDescription" >
+    Learn more about Cloudistics Ignite <a class='boldLink' href="https://www.cloudistics.com/ignite-cloud-platform/" target="_blank" style="font-weight: 600;margin-left:0px;">here.</a>
+</p>
+    <hr/>
+    <div style="width:400px; float:left;margin-bottom: 50px;">
+        <span class="featuredIn" style="margin-left:5px;">For a background on RBAC</span>
+        <a href="/work/Ignite2/" >
+        <img class="shortcutImg" src="/Images/cloudisticsCover.png" style="display:block; width:400px; margin-top:20px; margin-left:5px; box-shadow: 0px 5px 10px 0px #888888; border-radius: 5px;"/>
+        </a>
+    </div>
+</div>
+    <div class="focusContainer" style="width:50%;display:block;float:right;">
+    <img class ="focusImage"src="/Images/dashboardCurrent.png" style="width:475px; float:right; margin-right:50px; margin-top:-50px"/>
+    </div>
+    <br/><br/>
+<div style="float:left;">
+<p class="subheading blue"><span class="icon icon-education-science-09"></span>Establishing the vision and prioritizing User Goals:</p>
+<p class="subheadingDescription" >
+   The search feature was in discovery phase during different stages of the product lifecycle and the future roadmap. The changes in the above two factors had a major impact on the requirements and assisted the team in determining which parts of the functionality had to be prioritized for our users.</p>
+<p class="subheadingDescription" >
+   In order to account for the unpredictability of the product roadmap, I brainstormed different ways the search functionality could be useful for the users. After discussing different use-cases with the product stakeholders, the following themes/use-cases were prioritized during the discovery phase:</p>
+<ul>
+<li class="listStyle" style="margin-top:10px"><b>Navigation:</b> Considering the system objects had nested relationships and different namespaces, the users found it tough to navigate to a particular object in the system until they completely understood those nested relationships. In addition, several of these objects did not have direct navigation links on our side navigation. Hence, search could help our users understand the parent of a particular object and could reduce several clicks to navigate to that object.</li>
+<li class="listStyle" ><b>Discoverability:</b> Due to the nature of the product, an object in the Ignite ecosystem could have properties than identify the object more uniquely than the object name. Some examples of these properties would be MAC address and IP address. Allowing our users to search objects by such properties would empower them to solve their tasks in a more productive manner. </li>
+<li class="listStyle" ><b>Identifiability:</b> As mentioned earlier, the objects in the Ignite ecosystem had different namespaces and two objects with different parents could have the same name making it tough for the user to identify the result they are looking for. Hence, prioritizing such information in the search result by default would act as a stronger search surrogate for a result.</li>
+<li class="listStyle" ><b>Action Shortcuts:</b> Considering the user interface for Ignite is interspersed with user actions to create new objects through modals or forms, search could act as a single source to trigger such actions. This could be thought of being similar to the floating action button experience within Google's material design but with search. </li>
+<li class="listStyle" ><b>Triggers:</b> The Ignite UI also has special modes that could enable the entire system to function in different ways. These actions are not always present in the UI and if present, are purposely tough to access on the UI. Special codewords could be established within search to enable such triggers.</li>
+</ul>
+<p class="subheadingDescription" >
+   Interestingly, during the final design phase we decided to re-prioritize certain capabilities to account for the development effort required and to keep the footprint of the functionality low.</p>
+<img src="/Images/Prioritization.gif" style="width:800px; margin-left:auto; margin-right:auto; display:block;"/>
+    <div style="width:100%; height:2px; background-color:#0A5DA6; opacity:0.5"></div>
+</div>
+<div style="float:left;">
+<p class="subheading blue" style="display:block;float:left;margin-top:30px;width:100%;margin-bottom: 20px;"><span style="margin-right:5px;"><i class="fa fa-cubes"></i></span>Identifying the primary relationship between objects</p> 
+<p class="subheadingDescription">
+    In order to satisfy the user needs/themes that were established, the first step for us was to structure our product schema and identify the primary relationship between the objects among the multiple relationships they shared across objects.</p>
+    <p class="subheadingDescription">
+    This would help us:</p>
+    <ul style="margin-bottom:30px;">
+        <li class="listStyle" style="margin-top:10px">Identify the primary parent for an object.</li>
+        <li class="listStyle">Guide the landing destination for the particular object's search result.</li>
+    </ul>
+    <ul id="jquery-demo">
+  <li>
+    <a href="#slide1">
+      <img src="/Images/productHierarchy.jpg" alt="Product Hierarchy">
+    </a>
+  </li>
+  <li>
+    <a href="#slide2">
+      <img src="/Images/navigationHierarchy.jpg"  alt="Navigational Hierarchy">
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/namespaceHierarchy.jpg"  alt="Namspace based Hierarchy">
+    </a>
+  </li>
+</ul>
+    <p class="subheadingDescription">
+    After this exercise, it was established that the namespace hierarchy was the most favorable for us to strive towards since it would help the users distinguish two objects with the same name within a list of search results. In this case, the namespace acted as an attribute to establish uniqueness within the individual search result.
+    </p>
+     <div style="width:100%; height:2px; background-color:#0A5DA6; opacity:0.5"></div>
+    <p class="subheading blue"><span class="icon icon-education-science-09"></span>Determining all the searchable properties of the objects</p>
+    <p class="subheadingDescription">
+        The next big step for us to determine the size of this project from a design and technical perspective was to determine all the properties by which the user should be able to search a particular object. This helped us determine the type of search text we could expect the user to enter for building a search query. It also helped us determine the number of variations we could have per search result match and the size of the interface we would have to dedicate per search result to accommodate these variants.</p>
+     <p class="subheadingDescription">
+        Interestingly, this was one of the most challening tasks to accomplish coz the expectations from the product stakeholders kept on changing as we iterated on the designs. New properties were added and removed as the product evolved and our expectations from the search funtionality changed with that product evolution.</p>
+    
+    <p class="subheadingDescription">
+        I, intially started maintaining all the objects and properties within excel sheets but finally was able to migrate it to the fabulous product <a class="boldLink" target="_blank" href="http://airtable.com">Airtable</a>. Maintaining it in this manner ensured that the changes were easier to manage and gave me the flexibility to quickly chnage things as we iterated and focused on the information architecture and design of the search results. It also helped in evolving it to the role-based search experience eventually.</p>
+    <iframe class="airtable-embed" src="https://airtable.com/embed/shrhp3T0PYZGrZ6SL?backgroundColor=orange&viewControls=on" frameborder="0" onmousewheel="" width="100%" height="1000px" style="background: transparent; border: 1px solid #ccc;"></iframe>
+    <div style="width:100%; height:2px; background-color:#0A5DA6; opacity:0.5"></div>
+    <p class="subheading blue"><span class="icon icon-education-science-09"></span>Designing the search results for all the objects and it's variants</p>
+    <p class="subheadingDescription" >
+       There were several iterations done to improve the information architecture, structure and the scannability of these search results. Each iteration was applied to all the object and property combinations to ensure if all the scenarios were being satisfied with the particular pattern.
+    </p>
+    <p class="subheadingDescription" >
+     I can talk through the various ways in which they were improved and how we achieved the final results.
+    Using symbols in sketch made this very easy and time efficient. 🙌
+    </p>
+    <img src="/Images/igniteSearch.gif" />
+    <p class="subheadingDescription" >
+       Presented below are the final designs for all the objects and it's variants. There were several iterations done to improve the information architecture, structure and the scannability of these search results. I can talk through the various ways in which they were improved and how we achieved the final results.
+    </p>
+    <ul id="jquery-demo2">
+  <li>
+    <a href="#slide1">
+      <img src="/Images/AppInstance.jpg" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide2">
+      <img src="/Images/AppTemplates.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide3">
+      <img src="/Images/VDC.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide4">
+      <img src="/Images/Firewalls.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide5">
+      <img src="/Images/Networks.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide6">
+      <img src="/Images/Logical.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide7">
+      <img src="/Images/Hardware.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide8">
+      <img src="/Images/site.jpg"  alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#slide9">
+      <img src="/Images/user.jpg"  alt="">
+    </a>
+  </li>
+</ul>
+</div>
+<div style="float:left;">
+<p class="subheading blue" style="display:block;float:left;margin-top:30px;width:100%;margin-bottom: 20px;"><span style="margin-right:5px;"><i class="fa fa-cubes"></i></span>The Interaction Elements</p> 
+<p class="subheadingDescription">After determining all the the variants for the object results, I had to focus on all the  interactions the user will do in order to find the search results. We identified the ways the search algorithm would work and how certain objects would be priortized over others when listing them together.
+</p>
+        <img src="/Images/anatomy.jpg" style="width:100%; margin-left:auto;margin-right:auto; display:block;margin-bottom:30px;box-shadow: 0px 0px 5px 0px silver;"/>
+<img src="/Images/states.jpg" style="width:100%; margin-left:auto;margin-right:auto; display:block;margin-bottom:30px;box-shadow: 0px 0px 5px 0px silver;"/>
+
+<div style="width:100%; height:2px; background-color:#0A5DA6;"></div>
+</div>
+
+<br/>
+<br/>
+<br/>
+<div class='footer' style="float:left;">&copy; 2018 Mayank Khanna  | Hand-crafted by <a class='boldLink' href="http://twitter.com/mynk_k" target="_blank">@mynk_k</a></div>
+</section>
+</body>
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="/js/slippry.min.js"></script>
+<script>
+   jQuery('#jquery-demo').slippry({
+  // general elements & wrapper
+  slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+  // options
+  adaptiveHeight: false, // height of the sliders adapts to current slide
+  useCSS: false, // true, false -> fallback to js if no browser support
+  autoHover: false,
+  transition: 'horizontal'
+});
+   jQuery('#jquery-demo2').slippry({
+  // general elements & wrapper
+  slippryWrapper: '<div class="sy-box jquery-demo" />', // wrapper to wrap everything, including pager
+  // options
+  adaptiveHeight: false, // height of the sliders adapts to current slide
+  useCSS: false, // true, false -> fallback to js if no browser support
+  autoHover: false,
+  transition: 'horizontal'
+});
+    
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49196502-1', 'mayankk.in');
+  ga('send', 'pageview');
+</script>
+<script src="www/scripts/preview-export-min.js" type="text/javascript"></script>
+</html>
