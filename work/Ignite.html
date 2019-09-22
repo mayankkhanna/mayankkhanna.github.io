@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<link rel="stylesheet" href="/css/main2.css" type="text/css"/>
+<title>Mayank Khanna</title>
+</head>
+<body>
+    <section class="sidePaneProjectDetail">
+    <a href="/work/pilotly/"></a>
+    <a href="/work/Search/"></a>
+    <a href="/work/"></a>
+    <h3 class='nameHeading'><a href='/'><span class="highlight">Mayank</span> Khanna</a></h3>
+    </section>
+    <section id="hero" class="kaagazi"></section>
+    <section class="content">
+        <h1>Building the Ignite design system</h1>
+        <h2>How it all started</h2>
+        <p>During the early winter of 2018 my UX lead reached out to me with a problem. Our design files were becoming unmanageable. Over the past year and a half, we had been shipping features, small and large, in what felt like a never ending cycle. The company and the product was growing so fast that we couldn't give much attention to our collective work &mdash; <b>our source of truth.</b></p>
+        <p><span class="semibold">Conflicting wireframes, incorrect visual styles, inconsistent design patterns, erroneous states and confusing UI copy</span> had slipped into our design files, as we onboarded three new designers while chasing our company's roadmap. These issues were only becoming more obvious as developers and QA engineers referred those wireframes to build new features and fix bugs.</p>
+        <p>My lead suggested we break our existing wireframes into smaller sections to help with the conflicting states but as someone who used those files on a daily basis, I knew that was not enough. <b>We needed a solution</b> &mdash; not a quick fix but something that helped us build a strong foundation for our future work while a redesign and a slew of large features were being juggled on the startup's roadmap.</p>
+        <h2 class="left_1col">Role</h2>
+        <p class="midContent right_3col">After some background research and a detailed understanding of my lead's concerns, I proposed we invest time in building a design system. After a discussion with stakeholders on the immediate roadmap and the resource availability within the team, the idea caught on. <span class="semibold">I was tasked to lead the entire project while the other team members catered to the team's regular commitments.</span></p>
+    </section>
+    <section class="content">
+           <h2>Structuring the system &mdash; an MVP outlook</h2> 
+           <p>To ensure quick turnaround in my work, I focused on areas that mattered the most. Being an experienced designer in the team, I had to ensure that I was available to jump on new projects and complex bugs when needed. I decided to focus on the design counterpart of the design system and circle back to the code counterpart when a development resource was available for this purpose. Since, I knew the system will keep on evolving, I tried to keep the system as flexible as possible and the dependencies/constraints to a minimum. </p>
+           <p>With a strong understanding of the versioning and design library capabilities offered by <a href="https://www.abstract.com/" target="_blank">Abstract↗︎</a> and <a href="https://www.sketch.com/" target="_blank">Sketch↗︎</a>, I decided to organize the system in separate files. This helped me keep the system flexible and independent while also allowing for better organization and administration of the system. </p>
+    </section>
+    <section class="flushBackground">
+        <div class="flushBackgroundImage ignite_system"></div>
+    </section>
+    <section class="content">
+           <h2>Building the system &mdash; an atomic approach</h2> 
+           <p>Based on <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Brad Frost's principles about atomic design↗︎</a>, I broke down the different elements of the user interface to a similar bare-bones structure and tried to organize related facets of the system together.</p>
+    </section>
+    <section class="flushBackground">
+        <div class="flushBackgroundImage ignite_system"></div>
+    </section>
+    <section class="content">
+           <h2>The building blocks</h2> 
+           <p>Before I could start building the design components, I worked with the team's visual designer to consolidate all the styles into a structured and organized set. Missing gaps were filled to complete all permutations and combinations, which helped in reducing friction while building the components and applying them in the wireframes.</p>
+           <h3>Colors</h3>
+           <p>Different hues were organized together into a color palette and were numbered to help with naming conventions and ensure consistency. </p>
+           <h3>Text &amp; Icon Styles</h3>
+           <p>Text styles were replicated with different alignment settings to allow for different variations and applications within components and wireframes.</p>
+           <p>Due to the nature of our work, the team had not yet invested in building custom icons and we heavily relied on using <a href="http://bradfrost.com/blog/post/atomic-web-design/" target="_blank">Font Awesome↗︎</a> for all our icons. With the upcoming re-design plans, we also intended to switch to the latest version of the library. Hence having those text styles established, made the system future-proof.</p>
+           <h3>Design Tokens ➟ Layer Styles</h3>
+           <p>In order to keep the system code-friendly and ensure consistency, I established a set of design tokens that were built based on the layer styles needed within the components and wireframes. Sketch's capability to switch layer styles added the flexibility to build additional variants for an interaction pattern when needed.</p>
+    </section>
+    <section class="content">
+           <h2>Components &mdash; Simple &amp; Complex</h2> 
+           <p>Ensuring consistency at the deepest level within the system, I made sure to correctly and consistently name the different layers. This ensured that the override values within Sketch would not be cleared while interchanging the basic components like buttons and dropdowns.</p>
+           <h3>The Simple &mdash; Buttons, Textboxes &amp; Dropdowns</h3>
+           <p>Facets of the design components that could not be overridden were locked to ensure that designers strictly adhered to the established styles. It also ensured that the entire inventory of components and their variants were present in the design system upfront and new variants had to be added when needed.</p>
+           <h3>The Complex &mdash; Nested symbols</h3>
+           <p>While base components like buttons and dropdowns are a characteristic to any product's design system, more complex widgets are very product-specific. Catering to an enterprise product, the Ignite design system had to account for different kinds of visualization and it's variants. Several nested components were finely tuned to ensure ease of use and efficiency. This startegy also ensured a faster design workflow and kept the footprint of complex components minimal.</p>
+        <p>Animation of different layers coming together to form a chart.</p>
+           <h3>Bringing ease of use &mdash; Using the right plugins</h3>
+           <p>Tedious tasks of ensuring perfect alignment and padding within components was handled using plugins such as <a href="https://www.animaapp.com/" target="_blank">Anima↗︎</a>. This also reduced any chance of manual errors and inconsistencies within the system.</p>
+           <h3>A Faster Workflow &mdash; Interoperability between symbols</h3>
+        <p>Design is never done and modern SaaS products are always evolving. A user input that was once a text-box could change to a drop-down and vice-versa. The components were designed to ensure that they could be easily interchanged when needed. Special attention was paid to ensure that variants of components could be easily interchanged. <span class="semibold">Who wants to re-type the text when changing between active and disabled states of a button. Right?!</span></p>
+    </section>
+    <section class="content">
+           <h2>A new approach to building Data Grids</h2> 
+           <p>Being an enterprise application, the product UI was loaded with data grids. In addition, these data grids were present in all shapes and sizes.</p>
+           <h3>A handful of symbols</h3>
+           <p>In order to keep the footprint of table components to the minimum, I devised a new approach to building them. By breaking it to the most atomic unit of a cell, I was able to keep the footprint of table components to a minimum. This also allowed the flexibility of arranging them into a grid in the final wireframes as needed. </p>
+           <h3>Unlimited Possibilities</h3>
+           <p>By offloading the process of arranging cells into a grid in the final wireframes, the tables could exist in all shapes and sizes but still be driven by a cohesive visual structure. To add to that, the default data values for a grid were baked right into the symbols which allowed for convenient manipulation in the design workflow.</p>
+           <h3>A highly efficient maintenance system</h3>
+           <p>Since the final grid structure was maintained in the wireframes, tasks like adding a row or column or even removing them was a piece of cake.</p>
+    </section>
+    <section class="content">
+           <h2>Rebuilding the screens from the ground up &mdash; The New Truth</h2> 
+           <p>While the design system and it's elements were being structured, I started recreating our current wireframes in parallel. This ensured that I could evolve the components of the system as needed in the wireframes. Our current wireframes were organized in chapters and we continued the same approach for the new set as well but instead of replicating full-screen layouts screens were broken into their component structures. The atomic design approach was re-utilized in mapping out the component structures and their respective variants.</p>
+           <p>In the end what was achieved was a set of well-sturctured and organized wireframes that were easy to follow and were drastically error-free. In addition, our design files were now easy to maintain and evolve in an efficient manner. The original goals of this work were finally achieved and it was a delight working off of the new files &mdash;<span class="semibold">Not only for the designers but for the developers too.</span></p>
+           <p>Scrolling image of wireframes.</p>
+    </section>
+    <section class="content">
+           <h2>The Impact</h2> 
+           <p>With the design system and the final wireframes all set, we proactively switched the entire product team to start referring them. While everyone in the team appreciated an easy to follow structure and the absence of any significant errors, there were addtional advantages that we witnessed from the system:</p>
+            <div class="left_3col" style="margin-left:50px;">
+                <ol>
+                    <li>Creating and maintaining state variants of interface elements not only became much easier but also consistent and error-free.</li>
+                    <li>Iterating on new functionality and the overall IX workflow became highly efficient and robust.</li>
+                    <li>The time and effort required to merge new functionality and bug fixes was significantly reduced. The time required for this was reduced to matter of few hours now.</li>
+                    <li>Everyone in the team got tuned to a versioning based thinking which helped keeping the engineering and design teams better aligned.</li>
+                </ol>
+            </div>
+    </section>
+    <section class="content">
+           <h2>The end or the beginning &mdash; Looking forward</h2> 
+           <p>With the design system set in place and the new wireframes completed, my work was only half done. From onboarding the team of designers on how to use and take advantage of the new system to establishing merge processes for functinality bugs and visual improvements, I was entrusted to lead the entire design system practice within the team.</p>
+        <p>After completing the system, I defined processes and built a framework to maintain and seek contribution to the design system from every designer on the team. In addition, I helped build the competency and thinking within the team to value the pros and cons of one interaction pattern over another. </p>
+        <p class="semibold">The impact of the work helped initiate an open dialog within the team to better understand our work and it's value to the company's larger goals.</p>
+           <h2>A Special Thanks!</h2> 
+           <p>A very special thank you to the Salesforce design, Shopify design and Clarity design conference for providing valuable knowledge on building design systems and further evolving and promoting the practice among design professionals.</p>
+    </section>
+</body>
+<script type="text/javascript" src="/js/intense.js"></script>
+<script>
+   window.onload = function() {
+	// Intensify all images with the 'intense' classname.
+    var elements = document.querySelectorAll( '.intense' );
+	Intense( elements );
+}
+    
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-49196502-1', 'mayankk.in');
+  ga('send', 'pageview');
+</script>
+</html>

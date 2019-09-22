@@ -7,6 +7,7 @@ html {
     --text-black:#333333;
     --text-gray:#504b4b;
     --backgroundText-Gray:#dcdcdc;
+    --shadow-color: silver;
 }
 
 /* Defaults */
@@ -76,8 +77,7 @@ h3.nameHeading .highlight{
 /* Body */
 
 
-.hero {
-    background-image: url("/Images/assets/kodak_hero.png"); 
+#hero { 
     background-size: auto 600px; 
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -85,7 +85,12 @@ h3.nameHeading .highlight{
     width:100%;
 }
 
-.kaagazi{
+#hero, .kodak{
+    background-color: #f5f5f3;
+    background-image: url("/Images/assets/kodak_hero.png");
+}
+
+#hero, .kaagazi{
     background-image: url("/Images/assets/kaagazi_hero.JPG");
     background-size: cover;
     background-position: bottom;
@@ -97,6 +102,23 @@ h3.nameHeading .highlight{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
+}
+
+.contentImage{
+    margin: 20px auto 20px auto;
+    width:100%;
+    height:auto;
+}
+
+.flushBackground{
+    width:100%;
+    margin: 20px auto 20px auto;
+}
+
+.flushBackgroundImage{
+    background-size:contain;
+    background-repeat:no-repeat;
+    background-position: center;
 }
 
 .fullWidth{
@@ -116,7 +138,8 @@ h3.nameHeading .highlight{
 a{
     color: #0A5DA6;
     text-decoration: none;
-    font-weight:500;
+    font-weight:600;
+    text-underline-position:under;
 }
 
 a:hover{
@@ -133,6 +156,13 @@ h1{
 h2{
     font-size: 40px;
     font-weight:800;
+    grid-column-start: 1;
+    grid-column-end: 5;
+}
+
+h3{
+    font-size: 34px;
+    font-weight:500;
     grid-column-start: 1;
     grid-column-end: 5;
 }
@@ -180,10 +210,15 @@ li::before{
     color: var(--white);
 }
 
+.semibold{
+    font-weight: 500;
+}
+
 .boldText{
     font-size:96px;
     font-weight:800;
 }
+
 
 .backgroundText{
     font-size: 200px;
@@ -220,7 +255,10 @@ li::before{
     grid-column-start: 3;
     grid-column-end: 5;
 }
-
+.left_3col{
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
 
 
 
@@ -245,4 +283,50 @@ li::before{
     top:150px;
 }
 
+.home>.content {
+    width:80%;
+}
+
 /* layout ends */
+.profile_image{
+    width: 280px;
+    margin-top: -150px;
+    margin-right: 150px;
+    border-radius: 100%;
+    box-shadow: 0px 10px 20px var(--shadow-color);
+}
+
+.work_card{
+    height: 600px;
+    background-color: #b1d7ff;
+    box-shadow: 5px 5px 20px 0 var(--shadow-color);
+    margin:50px;
+    padding:50px;
+    cursor:pointer;
+    text-decoration: none !important;
+    color: var(--text-black);
+}
+
+.work_card:hover{
+    box-shadow: 10px 10px 40px 0 var(--shadow-color);
+}
+
+
+
+
+
+
+/* Base design overrides*/
+#design_system{
+    
+}
+
+#personalize{
+    background-image: url("/Images/assets/personalize.png");
+    background-size: cover;
+}
+
+.ignite_system{
+    background-image: url("/Images/assets/kodak_hero.png");
+    height: 400px;
+}
