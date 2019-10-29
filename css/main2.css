@@ -4,7 +4,8 @@ html {
     --white: white;
     --background-gray: #f8f8f8;
     --background-dgray: #f3f3f3;
-    --text-black:#333333;
+    --text-black:51,51,51;
+    --text-dgray:#626262;
     --text-gray:#504b4b;
     --backgroundText-Gray:#dcdcdc;
     --shadow-color: silver;
@@ -12,11 +13,8 @@ html {
 
 /* Defaults */
 
-@import url('https://rsms.me/inter/inter-ui.css');
-html { font-family: 'Inter UI', sans-serif; }
-@supports (font-variation-settings: normal) {
-  html { font-family: 'Inter UI var alt', sans-serif; }
-}
+@import url('https://rsms.me/inter/inter.css');
+html { font-family: 'Inter', sans-serif; }
 
 body
 {
@@ -43,6 +41,18 @@ video{
     -webkit-box-shadow:0px 5px 5px 1px #333333;
     box-shadow:0px 5px 5px 1px #333333;
 }
+.sidePaneProjectDetail a{
+    color: white;
+    font-size: 30px;
+    padding: 15px;
+    float: left;
+    border-bottom: 2px solid #333;
+    width:30px;
+}
+.sidePaneProjectDetail a:hover{
+    color: #000000;
+    background-color: white;
+}
 .sidePaneProjectDetail .nameHeading{
     -webkit-transform: rotate(270deg);
     -moz-transform:rotate(270deg);
@@ -61,7 +71,11 @@ video{
     color:white;
     margin-left:30px;
     font-size:28px;
+    background-color: transparent;
     font-weight:normal;
+    border:none;
+    padding:none;
+    float:none;
 }
 
 h3.nameHeading .highlight{
@@ -85,17 +99,32 @@ h3.nameHeading .highlight{
     width:100%;
 }
 
-#hero, .kodak{
+.backgroundVideo{
+  margin:0 auto;
+  display:flex;
+  width:auto;
+  height:600px;
+  align-content: center;
+}
+
+.kodak{
     background-color: #f5f5f3;
     background-image: url("/Images/assets/kodak_hero.png");
 }
-
-#hero, .kaagazi{
+.design_system{
+    background-image: url("/Images/assets/design_system_hero.png");
+    background-size: cover !important;
+    background-position: top;
+    background-color: #e25d10;
+}
+.kaagazi{
     background-image: url("/Images/assets/kaagazi_hero.JPG");
     background-size: cover;
     background-position: bottom;
 }
-
+#hero .backgroundVideo{
+    background-image: none;
+}
 .content{
     width:60%;
     margin: 100px auto 100px auto;
@@ -108,6 +137,7 @@ h3.nameHeading .highlight{
     margin: 20px auto 20px auto;
     width:100%;
     height:auto;
+    object-fit: contain;
 }
 
 .flushBackground{
@@ -136,26 +166,31 @@ h3.nameHeading .highlight{
     color: var(--backgroundText-Gray);
 }
 a{
-    color: #0A5DA6;
+    font-size:26px;
+    font-weight:400;
+    color:#197fea;
     text-decoration: none;
     font-weight:600;
     text-underline-position:under;
+    cursor:pointer;
+    transition: 1s;
 }
 
 a:hover{
-    text-decoration: underline;
+    color:#135faf;
+    text-decoration: none;
 }
 
 h1{
     font-size: 60px;
-    font-weight:100;
+    font-weight:400;
     grid-column-start: 1;
     grid-column-end: 5;
 }
 
 h2{
     font-size: 40px;
-    font-weight:800;
+    font-weight:400;
     grid-column-start: 1;
     grid-column-end: 5;
 }
@@ -169,11 +204,11 @@ h3{
 
 p{
     font-size:26px;
-    color:var(--text-black);
+    color:var(--text-dgray);
     line-height:40px;
     grid-column-start: 1;
     grid-column-end: 5;
-    font-weight:100;
+    font-weight:400;
 }
 
 p.midContent{
@@ -189,7 +224,6 @@ ol{
 
 li{
     font-size:26px;
-    font-weight:100;
     color:var(--text-black);
     line-height:40px;
     counter-increment: ol;
@@ -298,32 +332,87 @@ li::before{
 
 .work_card{
     height: 600px;
-    background-color: #b1d7ff;
-    box-shadow: 5px 5px 20px 0 var(--shadow-color);
+    background-color: #dbecff;
+    box-shadow: 5px 5px 10px 0 var(--shadow-color);
     margin:50px;
     padding:50px;
     cursor:pointer;
     text-decoration: none !important;
-    color: var(--text-black);
+    color: rgba(var(--text-black), 0.9);
+    transition: 0.3s;
 }
 
 .work_card:hover{
     box-shadow: 10px 10px 40px 0 var(--shadow-color);
 }
+/* Animation Styles */
+@keyframes horizontal_animate
+  {
+    from{
+      background-position: 0 0;
+    }
+    to{
+      background-position: 100% 0;
+    }
+  }
 
+@keyframes vertical_animate
+  {
+    from{
+      background-position: 0 0;
+    }
+    to{
+      background-position: 0 100%;
+    }
+  }
 
+.hr_animate{
+    background-position: center right;
+    background-repeat: repeat-x;
+    animation: horizontal_animate 50s linear infinite;
+}
+
+.vr_animate{
+    background-position: top center;
+    background-repeat: repeat-y;
+    animation: vertical_animate 50s linear infinite;
+}
 
 
 
 
 /* Base design overrides*/
 #design_system{
-    
+    background-color: #bdbffd;
+    background-image: url("/Images/assets/design_system.png");
+    background-image: url("/Images/assets/design_system.png"),linear-gradient(90deg, #f99c1d, transparent);
+    background-size: contain;
+    background-position: bottom;
+    background-repeat: no-repeat;
+}
+
+#ignite_search{
+    background-image: url("/Images/assets/search_background.png");
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+    color:white;
+}
+
+#partner_stores{
+    background-color: #bdbffd;
+    background-image: url("/Images/assets/partner_stores.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    color:white;
 }
 
 #personalize{
     background-image: url("/Images/assets/personalize.png");
     background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
 }
 
 .ignite_system{
